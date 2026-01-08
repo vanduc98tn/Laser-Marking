@@ -1139,7 +1139,7 @@
                                 FontSize="20"
                                 NoOfDecimalDigits="3" 
                                 NoOfDisplay="4" 
-                                Device="24801" 
+                                Device="24800" 
                                 IsReadOnly="False" 
                                 Background="Black" 
                                 Foreground="Cyan">
