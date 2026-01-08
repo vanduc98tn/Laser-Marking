@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,7 +41,7 @@ namespace Development
         public static new readonly DependencyProperty FontSizeProperty = DependencyProperty.Register(
             "FontSize", typeof(int), typeof(PLCButton), new PropertyMetadata(20));
 
-        public static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
+        public static new readonly DependencyProperty ContentProperty = DependencyProperty.Register(
              "Content", typeof(object), typeof(PLCButton),
              new PropertyMetadata("Name Button", OnContentChanged));
 
@@ -85,6 +86,32 @@ namespace Development
 
         public static readonly DependencyProperty IsMesComfirmProperty = DependencyProperty.Register(
            "IsMesComfirm", typeof(string), typeof(PLCButton), new PropertyMetadata(""));
+
+        public static new readonly DependencyProperty HorizontalContentAlignmentProperty = DependencyProperty.Register(
+           "HorizontalContentAlignment", typeof(HorizontalAlignment), typeof(PLCButton), new PropertyMetadata(HorizontalAlignment.Center));
+
+        public static new readonly DependencyProperty VerticalContentAlignmentProperty = DependencyProperty.Register(
+           "VerticalContentAlignment", typeof(VerticalAlignment), typeof(PLCButton), new PropertyMetadata(VerticalAlignment.Center));
+
+        public static new readonly DependencyProperty PaddingProperty = DependencyProperty.Register(
+           "Padding", typeof(Thickness), typeof(PLCButton), new PropertyMetadata(new Thickness(0)));
+
+
+        public new Thickness Padding
+        {
+            get { return (Thickness)GetValue(PaddingProperty); }
+            set { SetValue(PaddingProperty, value); }
+        }
+        public new VerticalAlignment VerticalContentAlignment
+        {
+            get { return (VerticalAlignment)GetValue(VerticalContentAlignmentProperty); }
+            set { SetValue(VerticalContentAlignmentProperty, value); }
+        }
+        public new HorizontalAlignment HorizontalContentAlignment
+        {
+            get { return (HorizontalAlignment)GetValue(HorizontalContentAlignmentProperty); }
+            set { SetValue(HorizontalContentAlignmentProperty, value); }
+        }
         public string IsMesComfrim
         {
             get { return (string)GetValue(IsMesComfirmProperty); }

@@ -36,12 +36,7 @@ namespace Development
             this.btLoadAx1Pos4.Click += BtLoadAx1Pos4_Click;
             this.btLoadAx1Pos5.Click += BtLoadAx1Pos5_Click;
 
-            this.btLoadAx2Pos0.Click += BtLoadAx2Pos0_Click;
-            this.btLoadAx2Pos1.Click += BtLoadAx2Pos1_Click;
-            this.btLoadAx2Pos2.Click += BtLoadAx2Pos2_Click;
-            this.btLoadAx2Pos3.Click += BtLoadAx2Pos3_Click;
-            this.btLoadAx2Pos4.Click += BtLoadAx2Pos4_Click;
-            this.btLoadAx2Pos5.Click += BtLoadAx2Pos5_Click;
+           
             
         }
 
