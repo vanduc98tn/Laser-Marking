@@ -330,6 +330,14 @@ namespace Development
         }
         private void Initial()
         {
+            if (TextON == (object)string.Empty)
+            {
+                TextON = Content;
+            }
+            if (TextOFF == (object)string.Empty)
+            {
+                TextOFF = Content;
+            }
             this.btn.Background = BackgroundLampOFF;
             this.btn.Content = TextOFF;
             this.SetImagePath(ImageOFF);
@@ -346,6 +354,7 @@ namespace Development
         }
         private void ChangeBrushLamp(bool status, Button btn)
         {
+            
             if (!status)
             {
                 this.btn.Background = BackgroundLampOFF;

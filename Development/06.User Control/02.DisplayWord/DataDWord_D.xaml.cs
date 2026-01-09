@@ -386,7 +386,6 @@ namespace Development
         }
         public void NotifyChangeDWord(string key, int value)
         {
-           
            Dispatcher.Invoke(() =>
            {
                if (this.Device == null) return;
