@@ -1,4 +1,4 @@
-﻿<Page x:Class="Development.PgTeachingMenu01"
+﻿<Page x:Class="Development.PgTeachingMenu02"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Development"
       mc:Ignorable="d" 
       d:DesignHeight="790" d:DesignWidth="1300"
-      Title="PgTeachingMenu01">
+      Title="PgTeachingMenu02">
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
@@ -73,12 +73,12 @@
                         <Button x:Name="btTeaching0"  Height="60">
                             <TextBlock Text="Manual Tab" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        
-                        <Button x:Name="btTeaching1" Background="#333333" Height="60">
-                            <TextBlock Text="Loader MGZ" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
+
+                        <Button x:Name="btTeaching1"  Height="60">
+                            <TextBlock Text="Loader MGZ"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btTeaching2"  Height="60">
-                            <TextBlock Text="Transfer"  Margin="10" HorizontalAlignment="Left"/>
+                        <Button x:Name="btTeaching2" Background="#333333" Height="60">
+                            <TextBlock Text="Transfer" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
                         <Button x:Name="btTeaching3"  Height="60">
                             <TextBlock Text="Unloader MGZ"  Margin="10" HorizontalAlignment="Left"/>
@@ -229,7 +229,7 @@
                                 <ColumnDefinition Width="1.3*"></ColumnDefinition>
 
                             </Grid.ColumnDefinitions>
-                            
+
                             <Grid Grid.Column="0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="35"></RowDefinition>
@@ -750,267 +750,6 @@
 
 
                             </Grid>
-                            <Grid Grid.Column="4">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="35"></RowDefinition>
-                                    <RowDefinition></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Grid Grid.Row="0">
-                                    <Grid Grid.Row="0" Grid.Column="0">
-                                        <Label BorderThickness="1" Background="#333333" Foreground="White" BorderBrush="CadetBlue" Margin="1">U2#7 - LOADER PUSHER LP</Label>
-                                    </Grid>
-                                </Grid>
-                                <Grid Grid.Row="1">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="3*"></ColumnDefinition>
-                                        <ColumnDefinition Width="1.3*"></ColumnDefinition>
-                                        <ColumnDefinition Width="0.3*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-
-                                        <RowDefinition Height="1*"></RowDefinition>
-                                        <RowDefinition Height="1.2*"></RowDefinition>
-                                        <RowDefinition Height="1.5*"></RowDefinition>
-                                        <RowDefinition Height="1.5*"></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Row="0" Grid.Column="0">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
-                                        <Label  Grid.Column="0" Background="Cyan" Margin="2" FontSize="12" >Pos Current</Label>
-                                        <Label Grid.Column="1" FontSize="12" Margin="2" Foreground="White" Background="Red" >Error Code</Label>
-
-                                    </Grid>
-                                    <Grid Grid.Row="1"  Grid.Column="0">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
-
-                                        <local:DataDWord_D
-                                            Grid.Column="0"
-                                            Grid.Row="1"
-                                            IsTabItem="False" 
-                                            FontFamily="Arial" 
-                                            FontSize="20"
-                                            NoOfDecimalDigits="3" 
-                                            NoOfDisplay="4" 
-                                            CodeDevice="D" Device="2514" 
-                                            IsReadOnly="True" 
-                                            Background="Black" 
-                                            Foreground="Cyan"
->
-                                        </local:DataDWord_D>
-                                        <local:DataDWord_D
-                                            Grid.Column="1"
-                                            Grid.Row="1"
-                                            Margin="2"
-                                            IsTabItem="False" 
-                                            FontFamily="Arial" 
-                                            FontSize="20"
-                                            NoOfDecimalDigits="0" 
-                                            NoOfDisplay="4" 
-                                            CodeDevice="D" Device="2594" 
-                                            IsReadOnly="True" 
-                                            Background="Black" 
-                                            Foreground="Red"
->
-                                        </local:DataDWord_D>
-                                    </Grid>
-                                    <Grid Grid.Row="2" Grid.Column="0">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition></ColumnDefinition>
-                                            <ColumnDefinition></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
-                                        <local:PLCButton
-                                            Grid.Column="0"
-                                            Margin="1"
-                                            Action="Momentary"
-                                            IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="3714"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="13714"
-                                            BackgroundLampOFF="OrangeRed"
-                                            BackgroundLampON="GreenYellow"
-                                            TextOFF="Servo OFF"
-                                            TextON="Servo ON"
-                                            Content="Servo.."
-                                            Background="Transparent"
-                                            Foreground="Black"
-                                            FontSize="16"
->
-                                        </local:PLCButton>
-                                        <local:PLCButton
-                                            Grid.Column="1"
-                                            Margin="1"
-                                            Action="Momentary"
-                                            IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="3754"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="13754"
-                                            BackgroundLampOFF="OrangeRed"
-                                            BackgroundLampON="GreenYellow"
-                                            TextOFF="Brake OFF"
-                                            TextON="Brake ON"
-                                            Content="Brake.."
-                                            Background="Transparent"
-                                            Foreground="Black"
-                                            FontSize="16"
->
-                                        </local:PLCButton>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Grid.Column="0">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition></ColumnDefinition>
-                                            <ColumnDefinition></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
-                                        <local:PLCButton
-                                            Grid.Column="0"
-                                            Margin="1"
-                                            Action="Momentary"
-                                            IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="2054"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="12054"
-                                            BackgroundLampOFF="Transparent"
-                                            BackgroundLampON="GreenYellow"
-                                            TextOFF="Home.."
-                                            TextON="Home Good"
-                                            Content="Home.."
-                                            Background="Transparent"
-                                            Foreground="Black"
-                                            FontSize="16"
-                                            IsComfrim="True"
-                                            IsMesComfrim="Confrim Go Home Machine"
->
-                                        </local:PLCButton>
-                                        <local:PLCButton
-                                            Grid.Column="1"
-                                            Margin="1"
-                                            Action="Momentary"
-                                            IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="2087"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="12087"
-                                            BackgroundLampOFF="Yellow"
-                                            BackgroundLampON="Red"
-                                            TextOFF="Jog Low"
-                                            TextON="Jog High"
-                                            Content="Jog Speed"
-                                            Background="Transparent"
-                                            Foreground="Black"
-                                            FontSize="16"
-                                            IsComfrim="False"
-                                            IsMesComfrim="Confrim Change Speed"
->
-                                        </local:PLCButton>
-                                    </Grid>
-
-                                    <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
-                                        <Label Grid.Column="1" Background="Orange" FontSize="12" Foreground="White" Margin="2" >Speed Jog</Label>
-                                    </Grid>
-                                    <local:DataDWord_D
-                                        Grid.Column="1"
-                                        Grid.Row="1"
-                                        Margin="2"
-                                        IsTabItem="False" 
-                                        FontFamily="Arial" 
-                                        FontSize="20"
-                                        NoOfDecimalDigits="3" 
-                                        NoOfDisplay="4"
-                                        CodeDevice="D" Device="2294" 
-                                        IsReadOnly="False" 
-                                        Background="Black" 
-                                        Foreground="Orange"
->
-                                    </local:DataDWord_D>
-                                    <Grid Grid.Row="2" Grid.Column="1">
-                                        <local:PLCButton
-                                            Grid.Column="1"
-                                            Margin="1"
-                                            Action="Momentary"
-                                            IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="2014"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="12014"
-                                            BackgroundLampOFF="Transparent"
-                                            BackgroundLampON="GreenYellow"
-                                            Content="JOG +"
-                                            Background="Transparent"
-                                            Foreground="Black"
-                                            FontSize="16"
->
-                                        </local:PLCButton>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Grid.Column="1">
-                                        <local:PLCButton
-                                            Grid.Column="1"
-                                            Margin="1"
-                                            Action="Momentary"
-                                            IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="2015"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="12015"
-                                            BackgroundLampOFF="Transparent"
-                                            BackgroundLampON="GreenYellow"
-                                            Content="JOG -"
-                                            Background="Transparent"
-                                            Foreground="Black"
-                                            FontSize="16"
->
-                                        </local:PLCButton>
-                                    </Grid>
-                                    <local:RectangleLamp
-                                         Grid.Row="1"
-                                         Grid.Column="2"
-                                         Margin="1"
-                                         IsTabItem="False"
-                                         DeviceLamp="L" AddressLamp="13838"
-                                         TextON="-"
-                                         TextOFF="-"
-                                         Background="LightGray"
-                                         FontSize="12"
-                                         Foreground="Black"
-                                         BackgroundLampOFF="Transparent"
-                                         BackgroundLampON="Red"
->
-                                    </local:RectangleLamp>
-                                    <local:RectangleLamp
-                                         Grid.Row="2"
-                                         Grid.Column="2"
-                                         Margin="1"
-                                         IsTabItem="False"
-                                         DeviceLamp="L" AddressLamp="13839"
-                                         TextON="o"
-                                         TextOFF="o"
-                                         Background="LightGray"
-                                         FontSize="12"
-                                         Foreground="Black"
-                                         BackgroundLampOFF="Transparent"
-                                         BackgroundLampON="Yellow"
->
-                                    </local:RectangleLamp>
-                                    <local:RectangleLamp
-                                         Grid.Row="3"
-                                         Grid.Column="2"
-                                         Margin="1"
-                                         IsTabItem="False"
-                                         DeviceLamp="L" AddressLamp="13840"
-                                         TextON="+"
-                                         TextOFF="+"
-                                         Background="LightGray"
-                                         FontSize="12"
-                                         Foreground="Black"
-                                         BackgroundLampOFF="Transparent"
-                                         BackgroundLampON="Red"
->
-                                    </local:RectangleLamp>
-                                </Grid>
-
-
-                            </Grid>
-
 
                         </Grid>
 
@@ -1036,10 +775,8 @@
             </Grid>
             <Grid Grid.Row="3">
                 <TabControl  Grid.Column="0" FontSize="15" BorderThickness="1" FontFamily="Arial" FontWeight="SemiBold" Margin="4 0 0 2">
-                    <TabItem FontSize="16" Header="RUN POSITIONING"  Height="30">
-                        
-                    </TabItem>
-                    <TabItem FontSize="16" Header="U2#1 - LOADDER LY"  Height="30">
+                    
+                    <TabItem FontSize="16" Header="U2#3 - LANCE1 L1X"  Height="30">
 
                         <Grid>
                             <Grid.Resources>
@@ -1092,7 +829,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30"/>
                                 <RowDefinition/>
-                                
+
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -1114,7 +851,7 @@
                             <Label Grid.Column="6" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Speed (mm/s)</Label>
                             <Label Grid.Column="7" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Load</Label>
 
-                            <UniformGrid Grid.Row="1" Grid.Column="0" Columns="1" Rows="5">
+                            <UniformGrid Grid.Row="1" Grid.Column="0" Columns="1" Rows="8">
                                 <local:PLCButton
                                     Action="Momentary"
                                     DeviceWrite="L" AddressWrite="2100"
@@ -1170,22 +907,6 @@
                                     IsMesComfrim="Confrim Go To POS"
 >
                                 </local:PLCButton>
-                                <!--<local:PLCButton
-                                    Action="Momentary"
-                                    DeviceWrite="L" AddressWrite="2100"
-                                    DeviceLamp="L" AddressLamp="12100"
-                                    BackgroundLampOFF="Transparent"
-                                    BackgroundLampON="GreenYellow"
-                                    Content=""
-                                    IsComfrim="True"
-                                    IsMesComfrim="Confrim Go To POS"
->
-                                </local:PLCButton>-->
-
-
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="4" Columns="1" Rows="5">
                                 <local:PLCButton
                                     Action="Momentary"
                                     DeviceWrite="L" AddressWrite="2105"
@@ -1208,12 +929,95 @@
                                     IsMesComfrim="Confrim Go To POS"
 >
                                 </local:PLCButton>
+                                <local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2107"
+                                    DeviceLamp="L" AddressLamp="12107"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content="OUTPUT MGZ LOWSP POS7"
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>
+
+                                <!--<local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2100"
+                                    DeviceLamp="L" AddressLamp="12100"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content=""
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>-->
 
 
                             </UniformGrid>
 
+                            <UniformGrid Grid.Row="1" Grid.Column="4" Columns="1" Rows="8">
+                                <local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2108"
+                                    DeviceLamp="L" AddressLamp="12108"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content="OUTPUT MGZ LOWSP POS8"
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>
+                                <local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2109"
+                                    DeviceLamp="L" AddressLamp="12109"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content="OUTPUT MGZ LOWSP POS9"
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>
+                                <local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2110"
+                                    DeviceLamp="L" AddressLamp="12110"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content=""
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>
+                                <local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2110"
+                                    DeviceLamp="L" AddressLamp="12110"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content=""
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>
+                                <local:PLCButton
+                                    Action="Momentary"
+                                    DeviceWrite="L" AddressWrite="2110"
+                                    DeviceLamp="L" AddressLamp="12110"
+                                    BackgroundLampOFF="Transparent"
+                                    BackgroundLampON="GreenYellow"
+                                    Content=""
+                                    IsComfrim="True"
+                                    IsMesComfrim="Confrim Go To POS"
+>
+                                </local:PLCButton>
+                                
 
-                            <UniformGrid Grid.Row="1" Grid.Column="1" Columns="1" Rows="5">
+                            </UniformGrid>
+
+
+                            <UniformGrid Grid.Row="1" Grid.Column="1" Columns="1" Rows="8">
                                 <local:DataDWord_D
                                     Margin="2"
                                     IsTabItem="False" 
@@ -1279,10 +1083,6 @@
                                     Foreground="Cyan"
 >
                                 </local:DataDWord_D>
-
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="5" Columns="1" Rows="5">
                                 <local:DataDWord_D
                                     Margin="2"
                                     IsTabItem="False" 
@@ -1309,11 +1109,54 @@
                                     Foreground="Cyan"
 >
                                 </local:DataDWord_D>
+                                <local:DataDWord_D
+                                    Margin="2"
+                                    IsTabItem="False" 
+                                    FontFamily="Arial" 
+                                    FontSize="20"
+                                    NoOfDecimalDigits="3" 
+                                    NoOfDisplay="4" 
+                                    CodeDevice="R" Device="2014" 
+                                    IsReadOnly="False" 
+                                    Background="Black" 
+                                    Foreground="Cyan"
+>
+                                </local:DataDWord_D>
+
+                            </UniformGrid>
+
+                            <UniformGrid Grid.Row="1" Grid.Column="5" Columns="1" Rows="8">
+                                <local:DataDWord_D
+                                    Margin="2"
+                                    IsTabItem="False" 
+                                    FontFamily="Arial" 
+                                    FontSize="20"
+                                    NoOfDecimalDigits="3" 
+                                    NoOfDisplay="4" 
+                                    CodeDevice="R" Device="2016" 
+                                    IsReadOnly="False" 
+                                    Background="Black" 
+                                    Foreground="Cyan"
+>
+                                </local:DataDWord_D>
+                                <local:DataDWord_D
+                                    Margin="2"
+                                    IsTabItem="False" 
+                                    FontFamily="Arial" 
+                                    FontSize="20"
+                                    NoOfDecimalDigits="3" 
+                                    NoOfDisplay="4" 
+                                    CodeDevice="R" Device="2018" 
+                                    IsReadOnly="False" 
+                                    Background="Black" 
+                                    Foreground="Cyan"
+>
+                                </local:DataDWord_D>
 
 
                             </UniformGrid>
 
-                            <UniformGrid Grid.Row="1" Grid.Column="2" Columns="1" Rows="5">
+                            <UniformGrid Grid.Row="1" Grid.Column="2" Columns="1" Rows="8">
                                 <local:DataDWord_D
                                     Margin="2"
                                     IsTabItem="False" 
@@ -1379,10 +1222,6 @@
                                     Foreground="Orange"
 >
                                 </local:DataDWord_D>
-
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="6" Columns="1" Rows="5">
                                 <local:DataDWord_D
                                     Margin="2"
                                     IsTabItem="False" 
@@ -1409,31 +1248,77 @@
                                     Foreground="Orange"
 >
                                 </local:DataDWord_D>
+                                <local:DataDWord_D
+                                    Margin="2"
+                                    IsTabItem="False" 
+                                    FontFamily="Arial" 
+                                    FontSize="20"
+                                    NoOfDecimalDigits="3" 
+                                    NoOfDisplay="4" 
+                                    CodeDevice="R" Device="12014" 
+                                    IsReadOnly="False" 
+                                    Background="Black" 
+                                    Foreground="Orange"
+>
+                                </local:DataDWord_D>
+
+                            </UniformGrid>
+
+                            <UniformGrid Grid.Row="1" Grid.Column="6" Columns="1" Rows="8">
+                                <local:DataDWord_D
+                                    Margin="2"
+                                    IsTabItem="False" 
+                                    FontFamily="Arial" 
+                                    FontSize="20"
+                                    NoOfDecimalDigits="3" 
+                                    NoOfDisplay="4" 
+                                    CodeDevice="R" Device="12016" 
+                                    IsReadOnly="False" 
+                                    Background="Black" 
+                                    Foreground="Orange"
+>
+                                </local:DataDWord_D>
+                                <local:DataDWord_D
+                                    Margin="2"
+                                    IsTabItem="False" 
+                                    FontFamily="Arial" 
+                                    FontSize="20"
+                                    NoOfDecimalDigits="3" 
+                                    NoOfDisplay="4" 
+                                    CodeDevice="R" Device="12018" 
+                                    IsReadOnly="False" 
+                                    Background="Black" 
+                                    Foreground="Orange"
+>
+                                </local:DataDWord_D>
 
 
                             </UniformGrid>
 
 
-                            <UniformGrid Grid.Row="1" Grid.Column="3" Columns="1" Rows="5">
+                            <UniformGrid Grid.Row="1" Grid.Column="3" Columns="1" Rows="8">
                                 <Button x:Name="btLoadTab1Pos0"/>
                                 <Button x:Name="btLoadTab1Pos1"/>
                                 <Button x:Name="btLoadTab1Pos2"/>
                                 <Button x:Name="btLoadTab1Pos3"/>
                                 <Button x:Name="btLoadTab1Pos4"/>
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="7" Columns="1" Rows="5">
                                 <Button x:Name="btLoadTab1Pos5"/>
                                 <Button x:Name="btLoadTab1Pos6"/>
-                                <!--<Button x:Name="btLoadTab1Pos7"/>
+                                <Button x:Name="btLoadTab1Pos7"/>
+                            </UniformGrid>
+
+                            <UniformGrid Grid.Row="1" Grid.Column="7" Columns="1" Rows="8">
                                 <Button x:Name="btLoadTab1Pos8"/>
-                                <Button x:Name="btLoadTab1Pos9"/>-->
+                                <Button x:Name="btLoadTab1Pos9"/>
+                                <Button x:Name="btLoadTab1Pos10"/>
+                                <Button x:Name="btLoadTab1Pos11"/>
+                                <Button x:Name="btLoadTab1Pos12"/>
 
                             </UniformGrid>
 
                         </Grid>
                     </TabItem>
-                    <TabItem FontSize="16" Header="U2#2 - LOADDER LZ"  Height="30">
+                    <TabItem FontSize="16" Header="U2#4 - LANCE2 L2X"  Height="30">
 
                         <Grid>
                             <Grid.Resources>
@@ -1859,237 +1744,6 @@
                                 <Button x:Name="btLoadTab2Pos7"/>
                                 <!--<Button x:Name="btLoadTab2Pos8"/>
                                 <Button x:Name="btLoadTab2Pos9"/>-->
-
-                            </UniformGrid>
-
-                        </Grid>
-                    </TabItem>
-                    <TabItem FontSize="16" Header="U2#7 - LOADDER LP"  Height="30">
-
-                        <Grid>
-                            <Grid.Resources>
-                                <Style TargetType="Button" BasedOn="{StaticResource ssButton}">
-                                    <Setter Property="HorizontalAlignment" Value="Stretch" />
-                                    <Setter Property="VerticalAlignment" Value="Stretch" />
-                                    <Setter Property="BorderThickness" Value="1"/>
-                                    <Setter Property="BorderBrush" Value="LightBlue"/>
-                                    <Setter Property="Margin" Value="3"/>
-                                    <Setter Property="ContentTemplate">
-                                        <Setter.Value>
-                                            <DataTemplate>
-                                                <Image Source="/01.Image/save03.png" Margin="5 2 5 2"/>
-                                            </DataTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Style>
-
-                                <Style TargetType="{x:Type Label}">
-                                    <Setter Property="Foreground" Value="White" />
-                                    <Setter Property="Padding" Value="1,0" />
-                                    <Setter Property="VerticalContentAlignment" Value="Center" />
-                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
-                                    <Setter Property="FontSize" Value="14" />
-                                    <Setter Property="BorderThickness" Value="1"/>
-                                    <Setter Property="BorderBrush" Value="CadetBlue"/>
-                                    <Setter Property="Background" Value="CadetBlue"/>
-
-                                </Style>
-
-                                <Style TargetType="TextBox">
-                                    <Setter Property="Background" Value="Black"/>
-                                    <Setter Property="Foreground" Value="Cyan"/>
-                                    <Setter Property="FontWeight" Value="Bold"/>
-                                    <Setter Property="VerticalContentAlignment" Value="Center"/>
-                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                    <Setter Property="FontSize" Value="20"/>
-                                    <Setter Property="Padding" Value="1,1,1,1"/>
-                                </Style>
-                                <Style TargetType="local:PLCButton">
-                                    <Setter Property="Margin" Value="1"/>
-                                    <Setter Property="UseLampCodition" Value="True"/>
-                                    <Setter Property="Background" Value="Transparent"/>
-                                    <Setter Property="Foreground" Value="Black"/>
-                                    <Setter Property="FontSize" Value="14"/>
-                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
-                                    <Setter Property="Padding" Value="5 0 0 0"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition/>
-
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="0.4*"/>
-                                <ColumnDefinition Width="0.4*"/>
-                                <ColumnDefinition Width="0.2*"/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="0.4*"/>
-                                <ColumnDefinition Width="0.4*"/>
-                                <ColumnDefinition Width="0.2*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Position Name</Label>
-                            <Label Grid.Column="1" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Position (mm)</Label>
-                            <Label Grid.Column="2" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Speed (mm/s)</Label>
-                            <Label Grid.Column="3" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Load</Label>
-
-                            <Label Grid.Column="4" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Position Name</Label>
-                            <Label Grid.Column="5" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Position (mm)</Label>
-                            <Label Grid.Column="6" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Speed (mm/s)</Label>
-                            <Label Grid.Column="7" Grid.Row="0"   BorderThickness="1" Margin="1" Padding="0">Load</Label>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="0" Columns="1" Rows="5">
-                                <local:PLCButton
-                                    Action="Momentary"
-                                    DeviceWrite="L" AddressWrite="2700"
-                                    DeviceLamp="L" AddressLamp="12700"
-                                    BackgroundLampOFF="Transparent"
-                                    BackgroundLampON="GreenYellow"
-                                    Content="WAIT POS0"
-                                    IsComfrim="True"
-                                    IsMesComfrim="Confrim Go To POS"
->
-                                </local:PLCButton>
-                                <local:PLCButton
-                                    Action="Momentary"
-                                    DeviceWrite="L" AddressWrite="2701"
-                                    DeviceLamp="L" AddressLamp="12701"
-                                    BackgroundLampOFF="Transparent"
-                                    BackgroundLampON="GreenYellow"
-                                    Content="PREPARE PUSH POS1"
-                                    IsComfrim="True"
-                                    IsMesComfrim="Confrim Go To POS"
->
-                                </local:PLCButton>
-                                <local:PLCButton
-                                    Action="Momentary"
-                                    DeviceWrite="L" AddressWrite="2702"
-                                    DeviceLamp="L" AddressLamp="12702"
-                                    BackgroundLampOFF="Transparent"
-                                    BackgroundLampON="GreenYellow"
-                                    Content="PUSHING POS2"
-                                    IsComfrim="True"
-                                    IsMesComfrim="Confrim Go To POS"
->
-                                </local:PLCButton>
-
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="4" Columns="1" Rows="5">
-
-                            </UniformGrid>
-
-
-                            <UniformGrid Grid.Row="1" Grid.Column="1" Columns="1" Rows="5">
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDecimalDigits="3" 
-                                    NoOfDisplay="4" 
-                                    CodeDevice="R" Device="3200" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Cyan"
->
-                                </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDecimalDigits="3" 
-                                    NoOfDisplay="4" 
-                                    CodeDevice="R" Device="3202" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Cyan"
->
-                                </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDecimalDigits="3" 
-                                    NoOfDisplay="4" 
-                                    CodeDevice="R" Device="3204" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Cyan"
->
-                                </local:DataDWord_D>
-
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="5" Columns="1" Rows="5">
-
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="2" Columns="1" Rows="5">
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDecimalDigits="3" 
-                                    NoOfDisplay="4" 
-                                    CodeDevice="R" Device="13200" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Orange"
->
-                                </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDecimalDigits="3" 
-                                    NoOfDisplay="4" 
-                                    CodeDevice="R" Device="13202" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Orange"
->
-                                </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDecimalDigits="3" 
-                                    NoOfDisplay="4" 
-                                    CodeDevice="R" Device="13204" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Orange"
->
-                                </local:DataDWord_D>
-                                
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="6" Columns="1" Rows="5">
-
-                            </UniformGrid>
-
-
-                            <UniformGrid Grid.Row="1" Grid.Column="3" Columns="1" Rows="5">
-                                <Button x:Name="btLoadTab3Pos0"/>
-                                <Button x:Name="btLoadTab3Pos1"/>
-                                <Button x:Name="btLoadTab3Pos2"/>
-                                <!--<Button x:Name="btLoadTab3Pos3"/>
-                                <Button x:Name="btLoadTab3Pos4"/>-->
-                            </UniformGrid>
-
-                            <UniformGrid Grid.Row="1" Grid.Column="7" Columns="1" Rows="5">
-                                <!--<Button x:Name="btLoadTab3Pos5"/>
-                                <Button x:Name="btLoadTab3Pos6"/>
-                                <Button x:Name="btLoadTab3Pos7"/>
-                                <Button x:Name="btLoadTab3Pos8"/>
-                                <Button x:Name="btLoadTab3Pos9"/>-->
 
                             </UniformGrid>
 

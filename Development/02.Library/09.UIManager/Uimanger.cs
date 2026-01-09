@@ -175,7 +175,7 @@ namespace Development
             pageTable.Add(PAGE_ID.PAGE_MENU, new PgMenu());
 
             pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_01, new PgTeachingMenu01());
-            //pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_02, new PgTeachingMenu02());
+            pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_02, new PgTeachingMenu02());
             //pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_03, new PgTeachingMenu03());
             //pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_04, new PgTeachingMenu04());
 

@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace Development
 {
     /// <summary>
-    /// Interaction logic for PgTeachingMenu01.xaml
+    /// Interaction logic for PgTeachingMenu02.xaml
     /// </summary>
-    public partial class PgTeachingMenu01 : Page
+    public partial class PgTeachingMenu02 : Page
     {
-        public PgTeachingMenu01()
+        public PgTeachingMenu02()
         {
             InitializeComponent();
 
@@ -53,9 +53,9 @@ namespace Development
             //this.btLoadTab2Pos8.Click += btLoadTab2Pos8_Click;
             //this.btLoadTab2Pos9.Click += btLoadTab2Pos9_Click;
 
-            this.btLoadTab3Pos0.Click += btLoadTab3Pos0_Click;
-            this.btLoadTab3Pos1.Click += btLoadTab3Pos1_Click;
-            this.btLoadTab3Pos2.Click += btLoadTab3Pos2_Click;
+            //this.btLoadTab3Pos0.Click += btLoadTab3Pos0_Click;
+            //this.btLoadTab3Pos1.Click += btLoadTab3Pos1_Click;
+            //this.btLoadTab3Pos2.Click += btLoadTab3Pos2_Click;
             //this.btLoadTab3Pos3.Click += btLoadTab3Pos3_Click;
             //this.btLoadTab3Pos4.Click += btLoadTab3Pos4_Click;
             //this.btLoadTab3Pos5.Click += btLoadTab3Pos5_Click;
@@ -63,7 +63,6 @@ namespace Development
             //this.btLoadTab3Pos7.Click += btLoadTab3Pos7_Click;
             //this.btLoadTab3Pos8.Click += btLoadTab3Pos8_Click;
             //this.btLoadTab3Pos9.Click += btLoadTab3Pos9_Click;
-
         }
 
 
