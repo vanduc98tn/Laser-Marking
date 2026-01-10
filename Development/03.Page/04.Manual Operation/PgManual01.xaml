@@ -130,12 +130,12 @@
                         <Setter Property="FontWeight" Value="Bold"/>
                         <Setter Property="BorderThickness" Value="1"/>
                         <Setter Property="BorderBrush" Value="Gray"/>
-                        <Setter Property="Margin" Value="2,2,2,2"/>
+                        <Setter Property="Margin" Value="1"/>
                     </Style>
                     <Style TargetType="Button" BasedOn="{StaticResource ssButton}">
                         <Setter Property="FontSize" Value="24"/>
                         <Setter Property="FontWeight" Value="Bold"/>
-                        <Setter Property="Margin" Value="9"/>
+                        <Setter Property="Margin" Value="1"/>
                         <Setter Property="Background" Value="White"/>
                     </Style>
                     <Style TargetType="StackPanel">
@@ -175,6 +175,11 @@
                         <Setter Property="FontWeight" Value="Normal"/>
                         <Setter Property="Margin" Value="4,2,4,2"/>
                     </Style>
+                    <Style TargetType="local:PLCButton">
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="UseLampCodition" Value="True"/>
+                        <Setter Property="Margin" Value="1"/>
+                    </Style>
                 </Grid.Resources>
 
                 
@@ -199,121 +204,126 @@
                                         <GradientStop Color="White" Offset="1.5"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
-                                <Label FontWeight="Bold" Foreground="White" FontSize="20"  Margin="0" Content="INPUT TRAY" >
+                                <Label FontWeight="Bold" Foreground="White" FontSize="20"  Margin="0" Content="LOADER WORK" >
                                     <Label.Effect>
                                         <DropShadowEffect Color="Black" Direction="320" ShadowDepth="5" Opacity="0.3"/>
                                     </Label.Effect>
                                 </Label>
                             </Border>
                             <UniformGrid Grid.Row="1" Margin="0" Columns="1">
-                                <GroupBox Height="80" Header="[INPUT KEEP TRAY]">
+                                <GroupBox Height="80" Header="[FIX MGZ]">
                                     <UniformGrid Columns="2">
                                         <local:PLCButton
-                                            Margin="0"
                                             Action="Momentary"
                                             IsTabItem="False"
                                             DeviceWrite="L" AddressWrite="1002"
-                                            UseLampCodition="True"
                                             DeviceLamp="L" AddressLamp="11002"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="CadetBlue"
-                                            Content="OPEN"
+                                            Content="FWD"
                                             Background="Transparent"
                                             Foreground="Black"
-                                            FontSize="16"
 >
                                         </local:PLCButton>
                                         <local:PLCButton
-                                            Margin="0"
                                             Action="Momentary"
                                             IsTabItem="False"
                                             DeviceWrite="L" AddressWrite="1003"
-                                            UseLampCodition="True"
                                             DeviceLamp="L" AddressLamp="11003"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="CadetBlue"
-                                            Content="CLOSE"
+                                            Content="BWD"
                                             Background="Transparent"
                                             Foreground="Black"
-                                            FontSize="16"
 >
                                         </local:PLCButton>
                                     </UniformGrid>
-
-
                                 </GroupBox>
-                                <GroupBox Height="80" Header="[INPUT KEEP TRAY]">
+                                <GroupBox Height="80" Header="[CLAMP MGZ]">
                                     <UniformGrid Columns="2">
                                         <local:PLCButton
-                                            Margin="0"
                                             Action="Momentary"
                                             IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="1002"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="11002"
+                                            DeviceWrite="L" AddressWrite="1004"
+                                            DeviceLamp="L" AddressLamp="11004"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="CadetBlue"
-                                            Content="OPEN"
+                                            Content="CLAMP ON"
                                             Background="Transparent"
                                             Foreground="Black"
-                                            FontSize="16"
 >
                                         </local:PLCButton>
                                         <local:PLCButton
-                                            Margin="0"
                                             Action="Momentary"
                                             IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="1003"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="11003"
+                                            DeviceWrite="L" AddressWrite="1005"
+                                            DeviceLamp="L" AddressLamp="11005"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="CadetBlue"
-                                            Content="CLOSE"
+                                            Content="CLAMP OFF"
                                             Background="Transparent"
                                             Foreground="Black"
-                                            FontSize="16"
 >
                                         </local:PLCButton>
                                     </UniformGrid>
-
-
                                 </GroupBox>
-                                <GroupBox Height="80" Header="[INPUT KEEP TRAY]">
+                                <GroupBox Height="80" Header="[C/V INPUT MGZ]">
                                     <UniformGrid Columns="2">
                                         <local:PLCButton
-                                            Margin="0"
                                             Action="Momentary"
                                             IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="1002"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="11002"
+                                            DeviceWrite="L" AddressWrite="1042"
+                                            DeviceLamp="L" AddressLamp="11042"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="CadetBlue"
-                                            Content="OPEN"
+                                            Content="ON"
                                             Background="Transparent"
                                             Foreground="Black"
-                                            FontSize="16"
 >
                                         </local:PLCButton>
                                         <local:PLCButton
-                                            Margin="0"
                                             Action="Momentary"
                                             IsTabItem="False"
-                                            DeviceWrite="L" AddressWrite="1003"
-                                            UseLampCodition="True"
-                                            DeviceLamp="L" AddressLamp="11003"
+                                            DeviceWrite="L" AddressWrite="1043"
+                                            DeviceLamp="L" AddressLamp="11043"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="CadetBlue"
-                                            Content="CLOSE"
+                                            Content="OFF"
                                             Background="Transparent"
                                             Foreground="Black"
-                                            FontSize="16"
 >
                                         </local:PLCButton>
                                     </UniformGrid>
-
-
                                 </GroupBox>
+                                <GroupBox Height="80" Header="[C/V OUTPUT MGZ]">
+                                    <UniformGrid Columns="2">
+                                        <local:PLCButton
+                                            Action="Momentary"
+                                            IsTabItem="False"
+                                            DeviceWrite="L" AddressWrite="1044"
+                                            DeviceLamp="L" AddressLamp="11044"
+                                            BackgroundLampOFF="Transparent"
+                                            BackgroundLampON="CadetBlue"
+                                            Content="ON"
+                                            Background="Transparent"
+                                            Foreground="Black"
+>
+                                        </local:PLCButton>
+                                        <local:PLCButton
+                                            Action="Momentary"
+                                            IsTabItem="False"
+                                            DeviceWrite="L" AddressWrite="1045"
+                                            DeviceLamp="L" AddressLamp="11045"
+                                            BackgroundLampOFF="Transparent"
+                                            BackgroundLampON="CadetBlue"
+                                            Content="OFF"
+                                            Background="Transparent"
+                                            Foreground="Black"
+>
+                                        </local:PLCButton>
+                                    </UniformGrid>
+                                </GroupBox>
+
                             </UniformGrid>
                         </Grid>
                     </Border>
