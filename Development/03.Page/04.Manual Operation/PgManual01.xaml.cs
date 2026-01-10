@@ -23,17 +23,20 @@ namespace Development
         public PgManual01()
         {
             InitializeComponent();
-            this.btSetting1.Click += BtSetting1_Click;
-            this.btSetting2.Click += BtSetting2_Click;
-            this.btSetting3.Click += BtSetting3_Click;
-            this.btSetting4.Click += BtSetting4_Click;
-            this.btSetting5.Click += BtSetting5_Click;
-            this.btSetting6.Click += BtSetting6_Click;
 
-            this.btTeaching.Click += BtTeaching_Click;
+            this.btManual00.Click += BtManual00_Click;
+            this.btManual01.Click += BtManual01_Click;
+            
+
         }
 
-        private void BtTeaching_Click(object sender, RoutedEventArgs e)
+
+
+        private void BtManual01_Click(object sender, RoutedEventArgs e)
+        {
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_01);
+        }
+        private void BtManual00_Click(object sender, RoutedEventArgs e)
         {
             if (UserManager.IsLogOn() == 3)
             {
@@ -45,33 +48,6 @@ namespace Development
                 wndMessenger.MessengerShow("Use Login AutoTeam To Page Teaching");
             }    
         }
-        private void BtSetting6_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_06);
-        }
-
-        private void BtSetting5_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_05);
-        }
-        private void BtSetting4_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_04);
-        }
-
-        private void BtSetting3_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_03);
-        }
-
-        private void BtSetting2_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_02);
-        }
-
-        private void BtSetting1_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_01);
-        }
+        
     }
 }

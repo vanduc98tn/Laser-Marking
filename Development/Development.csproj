@@ -261,6 +261,9 @@
     <Compile Include="03.Page\01.Teaching Menu\PgTeachingMenu02.xaml.cs">
       <DependentUpon>PgTeachingMenu02.xaml</DependentUpon>
     </Compile>
+    <Compile Include="03.Page\01.Teaching Menu\PgTeachingMenu03.xaml.cs">
+      <DependentUpon>PgTeachingMenu03.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.ko.Designer.cs">
       <DependentUpon>Resources.ko.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -435,10 +438,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\04.Manual Operation\PgManual02.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="03.Page\05.Status Menu\PgStatusMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -471,23 +470,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\04.Manual Operation\PgManual03.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\04.Manual Operation\PgManual04.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="05.Wnd\WndMessenger.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\04.Manual Operation\PgManual05.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\04.Manual Operation\PgManual06.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -523,6 +506,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="03.Page\01.Teaching Menu\PgTeachingMenu03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="03.Page\PgMain.xaml.cs">
@@ -542,9 +529,6 @@
     </Compile>
     <Compile Include="03.Page\04.Manual Operation\PgManual01.xaml.cs">
       <DependentUpon>PgManual01.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\04.Manual Operation\PgManual02.xaml.cs">
-      <DependentUpon>PgManual02.xaml</DependentUpon>
     </Compile>
     <Compile Include="03.Page\05.Status Menu\PgStatusMenu.xaml.cs">
       <DependentUpon>PgStatusMenu.xaml</DependentUpon>
@@ -568,18 +552,6 @@
     <Compile Include="02.Library\08.SystemsManager\05.NotifyPLCWord_ZR\NotifyPLCWord_ZR.cs" />
     <Compile Include="02.Library\02.Library AppSetting\ModbusCOMSetting.cs" />
     <Compile Include="02.Library\08.SystemsManager\06.NotifyEvenMES\NotifyEvenMES.cs" />
-    <Compile Include="03.Page\04.Manual Operation\PgManual03.xaml.cs">
-      <DependentUpon>PgManual03.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\04.Manual Operation\PgManual04.xaml.cs">
-      <DependentUpon>PgManual04.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\04.Manual Operation\PgManual05.xaml.cs">
-      <DependentUpon>PgManual05.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\04.Manual Operation\PgManual06.xaml.cs">
-      <DependentUpon>PgManual06.xaml</DependentUpon>
-    </Compile>
     <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu05.xaml.cs">
       <DependentUpon>PgSuperUserMenu05.xaml</DependentUpon>
     </Compile>

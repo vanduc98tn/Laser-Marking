@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace Development
 {
     /// <summary>
-    /// Interaction logic for PgTeachingMenu01.xaml
+    /// Interaction logic for PgTeachingMenu03.xaml
     /// </summary>
-    public partial class PgTeachingMenu01 : Page
+    public partial class PgTeachingMenu03 : Page
     {
-        public PgTeachingMenu01()
+        public PgTeachingMenu03()
         {
             InitializeComponent();
 
@@ -53,9 +53,9 @@ namespace Development
             //this.btLoadTab2Pos8.Click += btLoadTab2Pos8_Click;
             //this.btLoadTab2Pos9.Click += btLoadTab2Pos9_Click;
 
-            this.btLoadTab3Pos0.Click += btLoadTab3Pos0_Click;
-            this.btLoadTab3Pos1.Click += btLoadTab3Pos1_Click;
-            this.btLoadTab3Pos2.Click += btLoadTab3Pos2_Click;
+            //this.btLoadTab3Pos0.Click += btLoadTab3Pos0_Click;
+            //this.btLoadTab3Pos1.Click += btLoadTab3Pos1_Click;
+            //this.btLoadTab3Pos2.Click += btLoadTab3Pos2_Click;
             //this.btLoadTab3Pos3.Click += btLoadTab3Pos3_Click;
             //this.btLoadTab3Pos4.Click += btLoadTab3Pos4_Click;
             //this.btLoadTab3Pos5.Click += btLoadTab3Pos5_Click;
@@ -196,11 +196,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 9);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 9);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos8_Click(object sender, RoutedEventArgs e)
@@ -208,11 +208,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 8);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 8);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos7_Click(object sender, RoutedEventArgs e)
@@ -220,11 +220,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 7);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 7);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos6_Click(object sender, RoutedEventArgs e)
@@ -232,11 +232,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 6);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 6);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos5_Click(object sender, RoutedEventArgs e)
@@ -244,11 +244,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 5);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 5);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos4_Click(object sender, RoutedEventArgs e)
@@ -256,11 +256,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 4);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 4);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos3_Click(object sender, RoutedEventArgs e)
@@ -268,11 +268,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 3);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 3);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos2_Click(object sender, RoutedEventArgs e)
@@ -280,11 +280,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 2);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 2);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos1_Click(object sender, RoutedEventArgs e)
@@ -292,11 +292,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 1);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 1);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos0_Click(object sender, RoutedEventArgs e)
@@ -304,11 +304,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5222, 0);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 0);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15726, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
 
@@ -319,11 +319,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 9);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 9);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos8_Click(object sender, RoutedEventArgs e)
@@ -331,11 +331,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 8);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 8);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos7_Click(object sender, RoutedEventArgs e)
@@ -343,11 +343,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 7);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 7);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos6_Click(object sender, RoutedEventArgs e)
@@ -355,11 +355,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 6);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 6);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos5_Click(object sender, RoutedEventArgs e)
@@ -367,11 +367,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 5);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 5);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos4_Click(object sender, RoutedEventArgs e)
@@ -379,11 +379,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 4);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 4);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos3_Click(object sender, RoutedEventArgs e)
@@ -391,11 +391,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 3);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 3);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos2_Click(object sender, RoutedEventArgs e)
@@ -403,11 +403,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 2);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 2);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos1_Click(object sender, RoutedEventArgs e)
@@ -415,11 +415,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 1);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 1);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
         private void btLoadTab1Pos0_Click(object sender, RoutedEventArgs e)
@@ -427,11 +427,11 @@ namespace Development
 
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5212, 0);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5252, 0);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15716, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15756, false);
 
         }
 

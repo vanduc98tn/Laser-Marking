@@ -176,7 +176,7 @@ namespace Development
 
             pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_01, new PgTeachingMenu01());
             pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_02, new PgTeachingMenu02());
-            //pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_03, new PgTeachingMenu03());
+            pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_03, new PgTeachingMenu03());
             //pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_04, new PgTeachingMenu04());
 
             pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_PLC, new PgMechanicalMenuPLC());
@@ -188,11 +188,11 @@ namespace Development
             pageTable.Add(PAGE_ID.PAGE_SYSTEM_MENU_02, new PgSystemMenu02());
 
             pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_01, new PgManual01());
-            pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_02, new PgManual02());
-            pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_03, new PgManual03());
-            pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_04, new PgManual04());
-            pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_05, new PgManual05());
-            pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_06, new PgManual06());
+            //pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_02, new PgManual02());
+            //pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_03, new PgManual03());
+            //pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_04, new PgManual04());
+            //pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_05, new PgManual05());
+            //pageTable.Add(PAGE_ID.PAGE_MANUAL_OPERATION_06, new PgManual06());
 
             pageTable.Add(PAGE_ID.PAGE_STATUS_MENU, new PgStatusMenu());
 
