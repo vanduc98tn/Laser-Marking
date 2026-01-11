@@ -450,18 +450,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu02.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu03.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu04.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="06.User Control\04.RetangleLamp\RectangleLamp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -471,22 +459,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="05.Wnd\WndMessenger.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu05.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu06.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu07.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu08.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -539,31 +511,10 @@
     <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu01.xaml.cs">
       <DependentUpon>PgSuperUserMenu01.xaml</DependentUpon>
     </Compile>
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu02.xaml.cs">
-      <DependentUpon>PgSuperUserMenu02.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu03.xaml.cs">
-      <DependentUpon>PgSuperUserMenu03.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu04.xaml.cs">
-      <DependentUpon>PgSuperUserMenu04.xaml</DependentUpon>
-    </Compile>
     <Compile Include="02.Library\08.SystemsManager\04.NotifyPLCDWord_ZR\NotifyPLCDWord_ZR.cs" />
     <Compile Include="02.Library\08.SystemsManager\05.NotifyPLCWord_ZR\NotifyPLCWord_ZR.cs" />
     <Compile Include="02.Library\02.Library AppSetting\ModbusCOMSetting.cs" />
     <Compile Include="02.Library\08.SystemsManager\06.NotifyEvenMES\NotifyEvenMES.cs" />
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu05.xaml.cs">
-      <DependentUpon>PgSuperUserMenu05.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu06.xaml.cs">
-      <DependentUpon>PgSuperUserMenu06.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu07.xaml.cs">
-      <DependentUpon>PgSuperUserMenu07.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu08.xaml.cs">
-      <DependentUpon>PgSuperUserMenu08.xaml</DependentUpon>
-    </Compile>
     <Compile Include="300.Library Tester\NotifyEvenTester.cs" />
     <Compile Include="02.Library\12.PLCStore\PLCStore.cs" />
     <Compile Include="200.Server TCP Vision\NotifyEvenDataVision.cs" />

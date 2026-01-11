@@ -199,13 +199,13 @@ namespace Development
             pageTable.Add(PAGE_ID.PAGE_MODEL, new PgModel());
 
             pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_01, new PgSuperUserMenu01());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_02, new PgSuperUserMenu02());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_03, new PgSuperUserMenu03());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_04, new PgSuperUserMenu04());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_05, new PgSuperUserMenu05());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_06, new PgSuperUserMenu06());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_07, new PgSuperUserMenu07());
-            pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_08, new PgSuperUserMenu08());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_02, new PgSuperUserMenu02());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_03, new PgSuperUserMenu03());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_04, new PgSuperUserMenu04());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_05, new PgSuperUserMenu05());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_06, new PgSuperUserMenu06());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_07, new PgSuperUserMenu07());
+            //pageTable.Add(PAGE_ID.PAGE_SUPER_USER_MENU_08, new PgSuperUserMenu08());
 
             pageTable.Add(PAGE_ID.PAGE_ASSIGN_MENU, new PgAssignMenu());
             pageTable.Add(PAGE_ID.PAGE_ASSIGN_ALARM_SETTING, new PgAssignAlarmSetting());

@@ -23,46 +23,31 @@ namespace Development
         public PgSuperUserMenu01()
         {
             InitializeComponent();
-            this.btSetting1.Click += BtSetting1_Click;
-            this.btSetting2.Click += BtSetting2_Click;
-            this.btSetting3.Click += BtSetting3_Click;
-            this.btSetting4.Click += BtSetting4_Click;
-            this.btSetting5.Click += BtSetting5_Click;
-            this.btSetting6.Click += BtSetting6_Click;
-            this.btSetting7.Click += BtSetting7_Click;
-            this.btSetting8.Click += BtSetting8_Click;
+
+            this.btSetting01.Click += BtSetting01_Click;
+            this.btSetting02.Click += BtSetting02_Click;
+            this.btSetting03.Click += BtSetting03_Click;
+            this.btSetting04.Click += BtSetting04_Click;
+            
         }
-        private void BtSetting2_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_02);
-        }
-        private void BtSetting1_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_01);
-        }
-        private void BtSetting3_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_03);
-        }
-        private void BtSetting4_Click(object sender, RoutedEventArgs e)
+
+
+        private void BtSetting04_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_04);
         }
-        private void BtSetting5_Click(object sender, RoutedEventArgs e)
+        private void BtSetting03_Click(object sender, RoutedEventArgs e)
         {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_05);
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_03);
         }
-        private void BtSetting6_Click(object sender, RoutedEventArgs e)
+        private void BtSetting02_Click(object sender, RoutedEventArgs e)
         {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_06);
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_02);
         }
-        private void BtSetting7_Click(object sender, RoutedEventArgs e)
+        private void BtSetting01_Click(object sender, RoutedEventArgs e)
         {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_07);
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_01);
         }
-        private void BtSetting8_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_08);
-        }
+        
     }
 }

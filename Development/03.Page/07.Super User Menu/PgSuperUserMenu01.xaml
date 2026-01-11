@@ -31,7 +31,6 @@
                     <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="HorizontalContentAlignment" Value="Left"/>
 
-
                 </Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="VerticalAlignment" Value="Center"/>
@@ -70,56 +69,23 @@
                             </Label.Effect> System Menu
                         </Label>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 100 0 0" >
-                        <Button x:Name="btSetting1" Background="#333333" Height="60" Width="215"  Margin="0 5 5 5" >
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0 80 0 0" >
+                        <!--<Button x:Name="btSetting00"  Height="60">
+                            <TextBlock Text="Manual Tab" Margin="10" HorizontalAlignment="Left"/>
+                        </Button>-->
 
-                            <TextBlock Text="Delay Time 01" Foreground="White" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
+                        <Button x:Name="btSetting01" Background="#333333" Height="60">
+                            <TextBlock Text="Delay Cylinder " Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-                        <Button x:Name="btSetting2"  Height="60" Width="215" >
-
-                            <TextBlock  Text="Delay Time 02"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
+                        <Button x:Name="btSetting02"  Height="60">
+                            <TextBlock Text="Delay Work"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-                        <Button x:Name="btSetting3"  Height="60" Width="215" >
-
-                            <TextBlock  Text="Servo Param 01"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
+                        <Button x:Name="btSetting03"  Height="60">
+                            <TextBlock Text="Servo Setting 1"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-                        <Button x:Name="btSetting4"  Height="60" Width="215" >
-
-                            <TextBlock  Text="Servo Param 02"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
+                        <Button x:Name="btSetting04"  Height="60">
+                            <TextBlock Text="Servo Setting 2"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btSetting5" Height="60" Width="215"  Margin="0 5 5 5" >
-
-                            <TextBlock Text="Servo Param 03"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
-                        </Button>
-                        <Button x:Name="btSetting6" Height="60" Width="215"  Margin="0 5 5 5" >
-
-                            <TextBlock Text="Servo Param 04"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
-                        </Button>
-                        <Button x:Name="btSetting7" Height="60" Width="215"  Margin="0 5 5 5" >
-
-                            <TextBlock Text="Servo Param 05"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
-                        </Button>
-                        <Button x:Name="btSetting8" Height="60" Width="215"  Margin="0 5 5 5" >
-
-                            <TextBlock Text="Super User 08"  Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-
-                        </Button>
-
-
-
-
-
 
                     </StackPanel>
                 </Grid>
