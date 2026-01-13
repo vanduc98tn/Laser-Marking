@@ -244,141 +244,141 @@
 
                     <UniformGrid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" Columns="1" Rows="20">
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="300"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="301"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="302"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="303"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="304"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="305"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="306"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="307"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="308"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="309"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="310"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="311"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="312"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="313"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="314"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="315"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="316"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="317"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="318"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="319"
                             IsReadOnly="False"
 >
@@ -453,141 +453,141 @@
 
                     <UniformGrid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" Columns="1" Rows="20">
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="320"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="321"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="322"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="323"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="324"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="325"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="326"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="327"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="328"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="329"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="330"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="331"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="332"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="333"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="334"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="335"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="336"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="337"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="338"
                             IsReadOnly="False"
 >
                         </local:DataWord_D>
                         <local:DataWord_D
-                            NoOfDecimalDigits="1"
                             NoOfDisplay="2"
+                            NoOfDecimalDigits="1"
                             CodeDevice="D" Device="339"
                             IsReadOnly="False"
 >

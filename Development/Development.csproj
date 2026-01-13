@@ -267,6 +267,12 @@
     <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu02.xaml.cs">
       <DependentUpon>PgSuperUserMenu02.xaml</DependentUpon>
     </Compile>
+    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu03.xaml.cs">
+      <DependentUpon>PgSuperUserMenu03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu04.xaml.cs">
+      <DependentUpon>PgSuperUserMenu04.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.ko.Designer.cs">
       <DependentUpon>Resources.ko.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -486,6 +492,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu04.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
