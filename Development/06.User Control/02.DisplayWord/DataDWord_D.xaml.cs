@@ -386,47 +386,46 @@ namespace Development
         }
         public void NotifyChangeDWord(string key, int value)
         {
-           Dispatcher.Invoke(() =>
-           {
-               if (this.Device == null) return;
-               if (key != this.Device.ToString()) return;
-               var data = this.convertValue(Convert.ToDouble(value), NoOfDisplay, NoOfDecimalDigits);
-               if (!isShowKeypad)
-               {
-                   if (this.CodeDevice == NameDevice.D)
-                   {
-                       txt.Text = data;
-                       if (Text != data)
-                       {
-                           Text = data;
-                       }
-                   }
-                  
-               }
-           });
-              
-        }
+            Dispatcher.Invoke(() =>
+            {
+                if (this.Device == null) return;
+                if (key != this.Device.ToString()) return;
+                var data = this.convertValue(Convert.ToDouble(value), NoOfDisplay, NoOfDecimalDigits);
+                if (!isShowKeypad)
+                {
+                    if (this.CodeDevice == NameDevice.D)
+                    {
+                        txt.Text = data;
+                        if (Text != data)
+                        {
+                            Text = data;
+                        }
+                    }
 
+                }
+            });
+
+        }
         public void NotifyChangeDWord_ZR(string key, int value)
         {
-                Dispatcher.Invoke(() =>
+            Dispatcher.Invoke(() =>
+            {
+                if (this.Device == null) return;
+                if (key != this.Device.ToString()) return;
+                var data = this.convertValue(Convert.ToDouble(value), NoOfDisplay, NoOfDecimalDigits);
+                if (!isShowKeypad)
                 {
-                    if (this.Device == null) return;
-                    if (key != this.Device.ToString()) return;
-                    var data = this.convertValue(Convert.ToDouble(value), NoOfDisplay, NoOfDecimalDigits);
-                    if (!isShowKeypad)
+                    if (this.CodeDevice == NameDevice.ZR)
                     {
-                        if (this.CodeDevice == NameDevice.ZR)
+                        txt.Text = data;
+                        if (Text != data)
                         {
-                            txt.Text = data;
-                            if (Text != data)
-                            {
-                                Text = data;
-                            }
+                            Text = data;
                         }
-                        
                     }
-                });
+
+                }
+            });
         }
         public void NotifyChangeDWord_R(string key, int value)
         {
