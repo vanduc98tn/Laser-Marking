@@ -31,7 +31,7 @@ namespace Development
         Button _previousButton;
 
         private List<bool> L_ListUpdateDevicePLC_2000 = new List<bool>();
-        private List<int> D_ListUpdateDevicePLC_500 = new List<int>();
+        private List<short> D_ListUpdateDevicePLC_500 = new List<short>();
 
         public PgTeachingMenu01()
         {
@@ -79,9 +79,20 @@ namespace Development
             //this.btLoadTab3Pos8.Click += btLoadTab3Pos8_Click;
             //this.btLoadTab3Pos9.Click += btLoadTab3Pos9_Click;
 
+            this.btRunPoint.Clicked += BtRunPoint_Clicked;
+
         }
 
-
+        private void BtRunPoint_Clicked(object sender, RoutedEventArgs e)
+        {
+            WndComfirm comfirmYesNo = new WndComfirm();
+            if (!comfirmYesNo.DoComfirmYesNo($"Confrim go to POS")) return;
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.D, 501, 1);
+            Thread.Sleep(10);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2201, true);
+            Thread.Sleep(10);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2201, false);
+        }
 
         private void btLoadTab3Pos9_Click(object sender, RoutedEventArgs e)
         {
@@ -483,7 +494,7 @@ namespace Development
 
         private void PgTeachingMenu01_Loaded(object sender, RoutedEventArgs e)
         {
-            isUpdate = true;
+            this.isUpdate = true;
             new Thread(new ThreadStart(this.ReadPLC))
             {
                 IsBackground = true
@@ -576,10 +587,11 @@ namespace Development
                 {
                     if (UiManager.Instance.PLC.device.isOpen())
                     {
-                        UiManager.Instance.PLC.device.ReadMultiBits(DeviceCode.L, 2000, 1000, out L_ListUpdateDevicePLC_2000);
-                        UiManager.Instance.PLC.device.ReadMultiDoubleWord(DeviceCode.L, 2000, 1000, out D_ListUpdateDevicePLC_500);
+                        
+                        UiManager.Instance.PLC.device.ReadMultiWord(DeviceCode.D, 500, 20, out D_ListUpdateDevicePLC_500);
 
-                        this.UpdateUI();
+                        if (D_ListUpdateDevicePLC_500.Count > 0) this.isUpdate = false;
+                        //this.UpdateUI();
                     }
 
                     Thread.Sleep(20);
@@ -594,9 +606,7 @@ namespace Development
 
         private void UpdateUI()
         {
-
             if (!UiManager.Instance.PLC.device.isOpen() || !isUpdate) return;
-
             Dispatcher.BeginInvoke(new Action(() =>
             {
                 try
@@ -618,13 +628,7 @@ namespace Development
                     this.logger.Create("Update UI Error: " + ex.Message, LogLevel.Error);
                 }
             }));
-
-
-
-
         }
-
-
 
 
     }

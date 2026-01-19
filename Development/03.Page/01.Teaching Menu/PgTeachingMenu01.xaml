@@ -1163,15 +1163,20 @@
                                             Content="00"
 >
                                         </Label>
-                                        <Label
+                                        <local:DataDWord_D
                                             Grid.Column="1" Grid.Row="1"
-                                            x:Name="lbP0LZ"
-                                            Style="{StaticResource LabelDark}"
-                                            FontSize="18"
-                                            Margin="5"
-                                            Content="0000.000"
+                                            Margin="2"
+                                            IsTabItem="False" 
+                                            FontFamily="Arial" 
+                                            FontSize="20"
+                                            NoOfDisplay="4"
+                                            NoOfDecimalDigits="3" 
+                                            CodeDevice="R" Device="2202" 
+                                            IsReadOnly="True" 
+                                            Background="Black" 
+                                            Foreground="Gray"
 >
-                                        </Label>
+                                        </local:DataDWord_D>
                                         <Label
                                             Grid.Column="2" Grid.Row="0"
                                             Content="Point"
@@ -1192,15 +1197,28 @@
                                             Padding="0 0 0 0"
 >
                                         </Label>
-                                        
-                                        <Button 
+
+                                        <local:PLCButton
+                                            Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
+                                            Action="Momentary"
+                                            x:Name="btRunPoint"
+                                            DeviceLamp="L" AddressLamp="12201"
+                                            BackgroundLampOFF="Transparent"
+                                            BackgroundLampON="GreenYellow"
+                                            HorizontalContentAlignment="Center"
+                                            Content="LOADER MATRIX POS1"
+                                            IsComfrim="True"
+                                            IsMesComfrim="Confrim Go To POS"
+>
+                                        </local:PLCButton>
+                                        <!--<Button 
                                             Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
                                             x:Name="btRunPoint"
                                             Content="RUN POINT MATRIX"
                                             FontSize="18"
                                             ContentTemplate="{x:Null}"
 >
-                                        </Button>
+                                        </Button>-->
                                     </Grid>
                                 </GroupBox>
                             </Grid>
