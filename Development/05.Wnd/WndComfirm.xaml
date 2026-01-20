@@ -74,12 +74,12 @@
                             Cursor="Hand"
                             BorderThickness="1"
                             BorderBrush="#DDDDDD"
-                            Foreground="#555555"
+                            Foreground="#DDDDDD"
                             FontWeight="SemiBold"
                             FontSize="16">
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#F5F5F5"/>
+                                <Setter Property="Background" Value="OrangeRed"/>
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="Button">

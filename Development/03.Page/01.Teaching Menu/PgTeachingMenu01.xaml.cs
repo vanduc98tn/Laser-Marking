@@ -500,56 +500,60 @@ namespace Development
                 IsBackground = true
             }.Start();
 
-            GridMatrixCreat();
+            //GridMatrixCreat();
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public void GridMatrixCreat()
         {
-            int point = 13; // Tổng số nút bạn muốn tạo
-            int columns = 1; // Số cột cố định
-            int rows = (int)Math.Ceiling((double)point / columns); // Tính số hàng
-
-            //Xoá
-            grMatrixMGZ.Children.Clear();
-            grMatrixMGZ.ColumnDefinitions.Clear();
-            grMatrixMGZ.RowDefinitions.Clear();
-
-            // Đặt số cột và hàng cho Grid
-            for (int i = 0; i < columns; i++)
+            Dispatcher.BeginInvoke(new Action(() =>
             {
-                grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
-            }
+                int point = D_ListUpdateDevicePLC_500[2]; // Tổng số nút bạn muốn tạo
+                int columns = 1; // Số cột cố định
+                int rows = (int)Math.Ceiling((double)point / columns); // Tính số hàng
 
-            for (int i = 0; i < rows; i++)
-            {
-                grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
-            }
+                //Xoá
+                grMatrixMGZ.Children.Clear();
+                grMatrixMGZ.ColumnDefinitions.Clear();
+                grMatrixMGZ.RowDefinitions.Clear();
 
-            // Tạo các nút và thêm vào Grid
-            for (int i = 0; i < point; i++)
-            {
-                Button btMatrix = new Button
+                // Đặt số cột và hàng cho Grid
+                for (int i = 0; i < columns; i++)
                 {
-                    Content = $"{i + 1}",
-                    Tag = i + 1 // Lưu số tương ứng vào Tag
-                };
+                    grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
+                }
 
-                // Đăng ký sự kiện Click cho nút
-                btMatrix.Click += BtMatrix_Click;
+                for (int i = 0; i < rows; i++)
+                {
+                    grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
+                }
 
-                // Tính toán vị trí cột và hàng cho từng nút
-                //int row = i / columns; //từ trên xuống
-                int row = rows - 1 - (i / columns); //từ dưới lên
-                int column = i % columns;
+                // Tạo các nút và thêm vào Grid
+                for (int i = 0; i < point; i++)
+                {
+                    Button btMatrix = new Button
+                    {
+                        Content = $"{i + 1}",
+                        Tag = i + 1 // Lưu số tương ứng vào Tag
+                    };
 
-                Grid.SetRow(btMatrix, row);
-                Grid.SetColumn(btMatrix, column);
+                    // Đăng ký sự kiện Click cho nút
+                    btMatrix.Click += BtMatrix_Click;
 
-                grMatrixMGZ.Children.Add(btMatrix);
+                    // Tính toán vị trí cột và hàng cho từng nút
+                    //int row = i / columns; //từ trên xuống
+                    int row = rows - 1 - (i / columns); //từ dưới lên
+                    int column = i % columns;
 
-            }
+                    Grid.SetRow(btMatrix, row);
+                    Grid.SetColumn(btMatrix, column);
+
+                    grMatrixMGZ.Children.Add(btMatrix);
+
+                }
+            }));
+            
 
         }
 
@@ -590,12 +594,16 @@ namespace Development
                         
                         UiManager.Instance.PLC.device.ReadMultiWord(DeviceCode.D, 500, 20, out D_ListUpdateDevicePLC_500);
 
-                        if (D_ListUpdateDevicePLC_500.Count > 0) this.isUpdate = false;
+                        if (D_ListUpdateDevicePLC_500.Count > 0)
+                        {
+                            this.isUpdate = false;
+                        }
                         //this.UpdateUI();
                     }
 
                     Thread.Sleep(20);
                 }
+                GridMatrixCreat();
             }
             catch (Exception ex)
             {
