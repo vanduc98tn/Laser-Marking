@@ -16,22 +16,22 @@ namespace Mitsubishi
     public class TCP_MCProtocol
     {
         private static readonly Dictionary<DeviceCode, byte> DeviceCodeMap = new Dictionary<DeviceCode, byte>()
-    {
-        { DeviceCode.SM, 0x91 },
-        { DeviceCode.SD, 0xA9 },
-        { DeviceCode.X, 0x9C },
-        { DeviceCode.Y, 0x9D },
-        { DeviceCode.M, 0x90 },
-        { DeviceCode.L, 0x92 },
-        { DeviceCode.F, 0x93 },
-        { DeviceCode.V, 0x94 },
-        { DeviceCode.B, 0xA0 },
-        { DeviceCode.D, 0xA8 },
-        { DeviceCode.W, 0xB4 },
-        { DeviceCode.SB, 0xA1 },
-        { DeviceCode.R, 0xAF },
-        { DeviceCode.ZR, 0xB0 }
-    };
+        {
+            { DeviceCode.SM, 0x91 },
+            { DeviceCode.SD, 0xA9 },
+            { DeviceCode.X, 0x9C },
+            { DeviceCode.Y, 0x9D },
+            { DeviceCode.M, 0x90 },
+            { DeviceCode.L, 0x92 },
+            { DeviceCode.F, 0x93 },
+            { DeviceCode.V, 0x94 },
+            { DeviceCode.B, 0xA0 },
+            { DeviceCode.D, 0xA8 },
+            { DeviceCode.W, 0xB4 },
+            { DeviceCode.SB, 0xA1 },
+            { DeviceCode.R, 0xAF },
+            { DeviceCode.ZR, 0xB0 }
+        };
 
         private Thread ThreadMonitor;
         bool IsRunning = false;
