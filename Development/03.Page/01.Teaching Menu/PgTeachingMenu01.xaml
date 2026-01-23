@@ -1146,7 +1146,7 @@
                                         </Label>
                                         <Label
                                             Grid.Column="0" Grid.Row="1"
-                                            Content="P0 LZ POS"
+                                            Content="DATA POS"
                                             FontSize="16"
                                             Background="Transparent" Foreground="Black"
                                             BorderThickness="0"
@@ -1171,7 +1171,7 @@
                                             FontSize="20"
                                             NoOfDisplay="4"
                                             NoOfDecimalDigits="3" 
-                                            CodeDevice="R" Device="2202" 
+                                            CodeDevice="R" Device="2210" 
                                             IsReadOnly="True" 
                                             Background="Black" 
                                             Foreground="Gray"
@@ -1202,7 +1202,7 @@
                                             Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
                                             Action="Momentary"
                                             x:Name="btRunPoint"
-                                            DeviceLamp="L" AddressLamp="12201"
+                                            DeviceLamp="L" AddressLamp="12205"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="GreenYellow"
                                             HorizontalContentAlignment="Center"
@@ -1712,7 +1712,7 @@
                                     DeviceLamp="L" AddressLamp="12201"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="LOADER MATRIX POS1"
+                                    Content="INPUT MGZ HIGHTSP POS1"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1723,7 +1723,7 @@
                                     DeviceLamp="L" AddressLamp="12202"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ HIGHTSP POS2"
+                                    Content="INPUT MGZ LOWTSP POS2"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1734,7 +1734,7 @@
                                     DeviceLamp="L" AddressLamp="12203"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ LOWTSP POS3"
+                                    Content="FIX MGZ POS3"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1745,7 +1745,7 @@
                                     DeviceLamp="L" AddressLamp="12204"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="FIX MGZ POS4"
+                                    Content="LOADER MGZ POS4"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1772,7 +1772,7 @@
                                     DeviceLamp="L" AddressLamp="12205"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="LOADER MGZ POS5"
+                                    Content="LOADER MATRIX POS5"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1826,9 +1826,9 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="2202" 
-                                    IsReadOnly="True" 
+                                    IsReadOnly="False" 
                                     Background="Black" 
-                                    Foreground="Gray"
+                                    Foreground="Cyan"
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D
@@ -1882,9 +1882,9 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="2210" 
-                                    IsReadOnly="False" 
+                                    IsReadOnly="True" 
                                     Background="Black" 
-                                    Foreground="Cyan"
+                                    Foreground="Gray"
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D

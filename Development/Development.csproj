@@ -273,6 +273,9 @@
     <Compile Include="03.Page\07.Super User Menu\PgSuperUserMenu04.xaml.cs">
       <DependentUpon>PgSuperUserMenu04.xaml</DependentUpon>
     </Compile>
+    <Compile Include="03.Page\01.Teaching Menu\PgTeachingMenu04.xaml.cs">
+      <DependentUpon>PgTeachingMenu04.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.ko.Designer.cs">
       <DependentUpon>Resources.ko.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -500,6 +503,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="03.Page\07.Super User Menu\PgSuperUserMenu04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="03.Page\01.Teaching Menu\PgTeachingMenu04.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

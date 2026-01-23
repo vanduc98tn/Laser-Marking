@@ -15,6 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Data.Entity.Infrastructure.Design.Executor;
 
+using KeyPad;
+
 namespace Development
 {
     /// <summary>
@@ -87,12 +89,14 @@ namespace Development
         {
             WndComfirm comfirmYesNo = new WndComfirm();
             if (!comfirmYesNo.DoComfirmYesNo($"Confrim go to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.D, 501, 1);
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.D, 501, Convert.ToInt32(lbPoint.Content));
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2201, true);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2205, true);
             Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2201, false);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2205, false);
         }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void btLoadTab3Pos9_Click(object sender, RoutedEventArgs e)
         {
@@ -216,7 +220,6 @@ namespace Development
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
         private void btLoadTab2Pos9_Click(object sender, RoutedEventArgs e)
         {
@@ -500,12 +503,11 @@ namespace Development
                 IsBackground = true
             }.Start();
 
-            //GridMatrixCreat();
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public void GridMatrixCreat()
+        private void GridMatrixCreat()
         {
             Dispatcher.BeginInvoke(new Action(() =>
             {
@@ -517,46 +519,94 @@ namespace Development
                 grMatrixMGZ.Children.Clear();
                 grMatrixMGZ.ColumnDefinitions.Clear();
                 grMatrixMGZ.RowDefinitions.Clear();
+                #region
+                //// Đặt số cột và hàng cho Grid
+                //for (int i = 0; i < columns; i++)
+                //{
+                //    grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
+                //}
 
-                // Đặt số cột và hàng cho Grid
-                for (int i = 0; i < columns; i++)
-                {
-                    grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
-                }
+                //for (int i = 0; i < rows; i++)
+                //{
+                //    grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
+                //}
 
-                for (int i = 0; i < rows; i++)
-                {
-                    grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
-                }
+                //// Tạo các nút và thêm vào Grid
 
-                // Tạo các nút và thêm vào Grid
-                for (int i = 0; i < point; i++)
+                //for (int i = 0; i < point; i++)
+                //{
+                //    Button btMatrix = new Button
+                //    {
+                //        Content = $"{i + 1}",
+                //        Tag = i + 1 // Lưu số tương ứng vào Tag
+                //    };
+
+                //    // Đăng ký sự kiện Click cho nút
+                //    btMatrix.Click += BtMatrix_Click;
+
+                //    // Tính toán vị trí cột và hàng cho từng nút
+                //    int row = rows - 1 - (i / columns); //từ dưới lên
+                //    if (D_ListUpdateDevicePLC_500[4] < 0)
+                //    {
+                //        row = i / columns; //từ trên xuống
+                //    }
+                //    int column = i % columns;
+
+                //    Grid.SetRow(btMatrix, row);
+                //    Grid.SetColumn(btMatrix, column);
+
+                //    grMatrixMGZ.Children.Add(btMatrix);
+
+                //}
+                #endregion
+
+                int max = Math.Max(Math.Max(columns, rows), point);
+                for (int i = 0; i < max; i++)
                 {
-                    Button btMatrix = new Button
+                    // Tạo Column
+                    if (i < columns)
                     {
-                        Content = $"{i + 1}",
-                        Tag = i + 1 // Lưu số tương ứng vào Tag
-                    };
+                        grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
+                    }
 
-                    // Đăng ký sự kiện Click cho nút
-                    btMatrix.Click += BtMatrix_Click;
+                    // Tạo Row
+                    if (i < rows)
+                    {
+                        grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
+                    }
 
-                    // Tính toán vị trí cột và hàng cho từng nút
-                    //int row = i / columns; //từ trên xuống
-                    int row = rows - 1 - (i / columns); //từ dưới lên
-                    int column = i % columns;
+                    // Tạo Button
+                    if (i < point)
+                    {
+                        Button btMatrix = new Button
+                        {
+                            Content = (i + 1).ToString(),
+                            Tag = i + 1
+                        };
 
-                    Grid.SetRow(btMatrix, row);
-                    Grid.SetColumn(btMatrix, column);
+                        btMatrix.Click += BtMatrix_Click;
 
-                    grMatrixMGZ.Children.Add(btMatrix);
+                        int row = rows - 1 - (i / columns); // từ dưới lên
+                        if (D_ListUpdateDevicePLC_500[4] < 0)
+                        {
+                            row = i / columns; // từ trên xuống
+                        }
 
+                        int column = i % columns;
+
+                        Grid.SetRow(btMatrix, row);
+                        Grid.SetColumn(btMatrix, column);
+
+                        grMatrixMGZ.Children.Add(btMatrix);
+                    }
                 }
+
+                this.lbPoint.MouseDown -= LbPoint_MouseDown;
+                this.lbPoint.MouseDown += LbPoint_MouseDown;
             }));
             
 
         }
-
         private void BtMatrix_Click(object sender, RoutedEventArgs e)
         {
 
@@ -579,10 +629,24 @@ namespace Development
                 // Lấy số tương ứng từ Tag và in ra
                 pointSelectButton = (int)clickedButton.Tag;
 
+                lbPoint.Content = pointSelectButton.ToString();
+
 
             }
         }
+        private void LbPoint_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Keypad kp = new Keypad(false);
+            if (kp.ShowDialog() == true)
+            {
+                int value = Convert.ToInt32(kp.Result);
+                int min = 0;
+                int max = D_ListUpdateDevicePLC_500[2];
+                value = value < min ? min : (value > max ? max : value);
 
+                lbPoint.Content = value.ToString();
+            }
+        }
         private void ReadPLC()
         {
             try
@@ -603,7 +667,10 @@ namespace Development
 
                     Thread.Sleep(20);
                 }
-                GridMatrixCreat();
+                if (UiManager.Instance.PLC.device.isOpen())
+                {
+                    GridMatrixCreat();
+                }
             }
             catch (Exception ex)
             {
@@ -611,7 +678,6 @@ namespace Development
             }
 
         }
-
         private void UpdateUI()
         {
             if (!UiManager.Instance.PLC.device.isOpen() || !isUpdate) return;
