@@ -858,7 +858,7 @@
                                     DeviceLamp="L" AddressLamp="12300"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="WAIT POS0"
+                                    Content="WAIT POS0 L1X"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -869,7 +869,7 @@
                                     DeviceLamp="L" AddressLamp="12301"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="MATRIX POS1"
+                                    Content="INPUT PCB HIGHTSP POS1"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -880,7 +880,7 @@
                                     DeviceLamp="L" AddressLamp="12302"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ HIGHTSP POS2"
+                                    Content="INPUT PCB LOWSP POS2"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -891,7 +891,7 @@
                                     DeviceLamp="L" AddressLamp="12303"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ LOWSP POS3"
+                                    Content="VISION P1 POS3"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -902,7 +902,7 @@
                                     DeviceLamp="L" AddressLamp="12304"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="VISION1 POS4"
+                                    Content="VISION P2 POS4"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -913,7 +913,7 @@
                                     DeviceLamp="L" AddressLamp="12305"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="VISION2/QR POS5"
+                                    Content="SCANNER QR POS5"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -985,7 +985,7 @@
                                     DeviceLamp="L" AddressLamp="12310"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="OUTPUT PREPARE4 POS10"
+                                    Content="OUTPUT PCB HIGHTSP POS10"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -996,18 +996,7 @@
                                     DeviceLamp="L" AddressLamp="12311"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="OUTPUT HIGHTSP POS11"
-                                    IsComfrim="True"
-                                    IsMesComfrim="Confrim Go To POS"
->
-                                </local:PLCButton>
-                                <local:PLCButton
-                                    Action="Momentary"
-                                    DeviceWrite="L" AddressWrite="2312"
-                                    DeviceLamp="L" AddressLamp="12312"
-                                    BackgroundLampOFF="Transparent"
-                                    BackgroundLampON="GreenYellow"
-                                    Content="OUTPUT LOWSP POS12"
+                                    Content="OUTPUT PCB LOWSP POS11"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1039,9 +1028,9 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="2402" 
-                                    IsReadOnly="True" 
+                                    IsReadOnly="False" 
                                     Background="Black" 
-                                    Foreground="Gray"
+                                    Foreground="Cyan"
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D
@@ -1173,19 +1162,6 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="2422" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Cyan"
->
-                                </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDisplay="4"
-                                    NoOfDecimalDigits="3" 
-                                    CodeDevice="R" Device="2424" 
                                     IsReadOnly="False" 
                                     Background="Black" 
                                     Foreground="Cyan"
@@ -1356,19 +1332,6 @@
                                     Foreground="Orange"
 >
                                 </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDisplay="4"
-                                    NoOfDecimalDigits="3" 
-                                    CodeDevice="R" Device="12424" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Orange"
->
-                                </local:DataDWord_D>
 
 
                             </UniformGrid>
@@ -1390,7 +1353,7 @@
                                 <Button x:Name="btLoadTab1Pos9"/>
                                 <Button x:Name="btLoadTab1Pos10"/>
                                 <Button x:Name="btLoadTab1Pos11"/>
-                                <Button x:Name="btLoadTab1Pos12"/>
+                                <!--<Button x:Name="btLoadTab1Pos12"/>-->
 
                             </UniformGrid>
 
@@ -1478,7 +1441,7 @@
                                     DeviceLamp="L" AddressLamp="12400"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="WAIT POS0"
+                                    Content="WAIT POS0 L2X"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1489,7 +1452,7 @@
                                     DeviceLamp="L" AddressLamp="12401"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="MATRIX POS1"
+                                    Content="INPUT PCB HIGHTSP POS1"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1500,7 +1463,7 @@
                                     DeviceLamp="L" AddressLamp="12402"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ HIGHTSP POS2"
+                                    Content="INPUT PCB LOWSP POS2"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1511,7 +1474,7 @@
                                     DeviceLamp="L" AddressLamp="12403"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ LOWSP POS3"
+                                    Content="VISION P1 POS3"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1522,7 +1485,7 @@
                                     DeviceLamp="L" AddressLamp="12404"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="VISION1 POS4"
+                                    Content="VISION P2 POS4"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1533,7 +1496,7 @@
                                     DeviceLamp="L" AddressLamp="12405"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="VISION2/QR POS5"
+                                    Content="SCANNER QR POS5"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1605,7 +1568,7 @@
                                     DeviceLamp="L" AddressLamp="12410"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="OUTPUT PREPARE4 POS10"
+                                    Content="OUTPUT PCB HIGHTSP POS10"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1616,18 +1579,7 @@
                                     DeviceLamp="L" AddressLamp="12411"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="OUTPUT HIGHTSP POS11"
-                                    IsComfrim="True"
-                                    IsMesComfrim="Confrim Go To POS"
->
-                                </local:PLCButton>
-                                <local:PLCButton
-                                    Action="Momentary"
-                                    DeviceWrite="L" AddressWrite="2412"
-                                    DeviceLamp="L" AddressLamp="12412"
-                                    BackgroundLampOFF="Transparent"
-                                    BackgroundLampON="GreenYellow"
-                                    Content="OUTPUT LOWSP POS12"
+                                    Content="OUTPUT PCB LOWSP POS11"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1659,9 +1611,9 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="2602" 
-                                    IsReadOnly="True" 
+                                    IsReadOnly="False" 
                                     Background="Black" 
-                                    Foreground="Gray"
+                                    Foreground="Cyan"
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D
@@ -1793,19 +1745,6 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="2622" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Cyan"
->
-                                </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDisplay="4"
-                                    NoOfDecimalDigits="3" 
-                                    CodeDevice="R" Device="2624" 
                                     IsReadOnly="False" 
                                     Background="Black" 
                                     Foreground="Cyan"
@@ -1976,19 +1915,6 @@
                                     Foreground="Orange"
 >
                                 </local:DataDWord_D>
-                                <local:DataDWord_D
-                                    Margin="2"
-                                    IsTabItem="False" 
-                                    FontFamily="Arial" 
-                                    FontSize="20"
-                                    NoOfDisplay="4"
-                                    NoOfDecimalDigits="3" 
-                                    CodeDevice="R" Device="12624" 
-                                    IsReadOnly="False" 
-                                    Background="Black" 
-                                    Foreground="Orange"
->
-                                </local:DataDWord_D>
 
 
                             </UniformGrid>
@@ -2010,7 +1936,7 @@
                                 <Button x:Name="btLoadTab2Pos9"/>
                                 <Button x:Name="btLoadTab2Pos10"/>
                                 <Button x:Name="btLoadTab2Pos11"/>
-                                <Button x:Name="btLoadTab2Pos12"/>
+                                <!--<Button x:Name="btLoadTab2Pos12"/>-->
 
                             </UniformGrid>
 

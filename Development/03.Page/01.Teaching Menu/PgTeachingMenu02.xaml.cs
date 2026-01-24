@@ -43,7 +43,7 @@ namespace Development
             this.btLoadTab1Pos9.Click += btLoadTab1Pos9_Click;
             this.btLoadTab1Pos10.Click += btLoadTab1Pos10_Click;
             this.btLoadTab1Pos11.Click += btLoadTab1Pos11_Click;
-            this.btLoadTab1Pos12.Click += btLoadTab1Pos12_Click;
+            //this.btLoadTab1Pos12.Click += btLoadTab1Pos12_Click;
 
             this.btLoadTab2Pos0.Click += btLoadTab2Pos0_Click;
             this.btLoadTab2Pos1.Click += btLoadTab2Pos1_Click;
@@ -57,7 +57,7 @@ namespace Development
             this.btLoadTab2Pos9.Click += btLoadTab2Pos9_Click;
             this.btLoadTab2Pos10.Click += btLoadTab2Pos10_Click;
             this.btLoadTab2Pos11.Click += btLoadTab2Pos11_Click;
-            this.btLoadTab2Pos12.Click += btLoadTab2Pos12_Click;
+            //this.btLoadTab2Pos12.Click += btLoadTab2Pos12_Click;
 
             //this.btLoadTab3Pos0.Click += btLoadTab3Pos0_Click;
             //this.btLoadTab3Pos1.Click += btLoadTab3Pos1_Click;

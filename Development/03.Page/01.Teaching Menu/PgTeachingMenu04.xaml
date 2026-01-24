@@ -301,7 +301,7 @@
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D
-                                    NoOfDisplay="4"
+                                    NoOfDisplay="3"
                                     NoOfDecimalDigits="3"
                                     CodeDevice="D" Device="504"
                                     IsReadOnly="False"
@@ -325,7 +325,7 @@
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D
-                                    NoOfDisplay="4"
+                                    NoOfDisplay="3"
                                     NoOfDecimalDigits="3"
                                     CodeDevice="D" Device="514"
                                     IsReadOnly="False"

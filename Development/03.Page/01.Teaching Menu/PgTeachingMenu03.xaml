@@ -1266,7 +1266,7 @@
                                     DeviceLamp="L" AddressLamp="12601"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="UNLOADER MATRIX POS1"
+                                    Content="INPUT MGZ HIGHTSP POS1"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1277,7 +1277,7 @@
                                     DeviceLamp="L" AddressLamp="12602"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ HIGHTSP POS2"
+                                    Content="INPUT MGZ LOWTSP POS2"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1288,7 +1288,7 @@
                                     DeviceLamp="L" AddressLamp="12603"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="INPUT MGZ LOWTSP POS3"
+                                    Content="FIX MGZ POS3"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1299,7 +1299,7 @@
                                     DeviceLamp="L" AddressLamp="12604"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="FIX MGZ POS4"
+                                    Content="UNLOADER MGZ POS4"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1326,7 +1326,7 @@
                                     DeviceLamp="L" AddressLamp="12605"
                                     BackgroundLampOFF="Transparent"
                                     BackgroundLampON="GreenYellow"
-                                    Content="UNLOADER MGZ POS5"
+                                    Content="UNLOADER MATRIX POS5"
                                     IsComfrim="True"
                                     IsMesComfrim="Confrim Go To POS"
 >
@@ -1380,9 +1380,9 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="3002" 
-                                    IsReadOnly="True" 
+                                    IsReadOnly="False" 
                                     Background="Black" 
-                                    Foreground="Gray"
+                                    Foreground="Cyan"
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D
@@ -1436,9 +1436,9 @@
                                     NoOfDisplay="4"
                                     NoOfDecimalDigits="3" 
                                     CodeDevice="R" Device="3010" 
-                                    IsReadOnly="False" 
+                                    IsReadOnly="True" 
                                     Background="Black" 
-                                    Foreground="Cyan"
+                                    Foreground="Gray"
 >
                                 </local:DataDWord_D>
                                 <local:DataDWord_D

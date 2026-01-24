@@ -242,13 +242,13 @@ namespace Development
         private void btLoadTab2Pos5_Click(object sender, RoutedEventArgs e)
         {
 
-            WndComfirm comfirmYesNo = new WndComfirm();
-            if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
-            UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 5);
-            Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
-            Thread.Sleep(10);
-            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
+            //WndComfirm comfirmYesNo = new WndComfirm();
+            //if (!comfirmYesNo.DoComfirmYesNo($"Confrim Load Current to POS")) return;
+            //UiManager.Instance.PLC.device.WriteWord(DeviceCode.R, 5262, 5);
+            //Thread.Sleep(10);
+            //UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, true);
+            //Thread.Sleep(10);
+            //UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 15766, false);
 
         }
         private void btLoadTab2Pos4_Click(object sender, RoutedEventArgs e)
