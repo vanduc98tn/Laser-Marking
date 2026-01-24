@@ -32,7 +32,7 @@ namespace Development
 
         Button _previousButton;
 
-        private List<bool> L_ListUpdateDevicePLC_2000 = new List<bool>();
+        private List<bool> L_ListUpdateDevicePLC_12000 = new List<bool>();
         private List<short> D_ListUpdateDevicePLC_500 = new List<short>();
 
         public PgTeachingMenu01()
@@ -687,7 +687,7 @@ namespace Development
                 {
                     if (!isUpdate) return;
 
-                    if (L_ListUpdateDevicePLC_2000.Count > 0)
+                    if (L_ListUpdateDevicePLC_12000.Count > 0)
                     {
 
                     }

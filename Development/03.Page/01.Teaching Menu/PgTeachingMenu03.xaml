@@ -777,7 +777,193 @@
             <Grid Grid.Row="3">
                 <TabControl  Grid.Column="0" FontSize="15" BorderThickness="1" FontFamily="Arial" FontWeight="SemiBold" Margin="4 0 0 2">
                     <TabItem FontSize="16" Header="RUN POSITIONING"  Height="30">
+                        <Grid>
+                            <Grid.Resources>
+                                <Style TargetType="Button" BasedOn="{StaticResource ssButton}">
+                                    <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                    <Setter Property="BorderThickness" Value="1"/>
+                                    <Setter Property="BorderBrush" Value="LightBlue"/>
+                                    <Setter Property="Margin" Value="3"/>
+                                    <Setter Property="ContentTemplate">
+                                        <Setter.Value>
+                                            <DataTemplate>
+                                                <Image Source="/01.Image/save03.png" Margin="5 2 5 2"/>
+                                            </DataTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
 
+                                <Style TargetType="{x:Type Label}">
+                                    <Setter Property="Foreground" Value="White" />
+                                    <Setter Property="Padding" Value="1,0" />
+                                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                    <Setter Property="FontSize" Value="14" />
+                                    <Setter Property="BorderThickness" Value="1"/>
+                                    <Setter Property="BorderBrush" Value="CadetBlue"/>
+                                    <Setter Property="Background" Value="CadetBlue"/>
+
+                                </Style>
+
+                                <Style TargetType="TextBox">
+                                    <Setter Property="Background" Value="Black"/>
+                                    <Setter Property="Foreground" Value="Cyan"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="FontSize" Value="20"/>
+                                    <Setter Property="Padding" Value="1,1,1,1"/>
+                                </Style>
+                                <Style TargetType="local:PLCButton">
+                                    <Setter Property="Margin" Value="1"/>
+                                    <Setter Property="UseLampCodition" Value="True"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="Padding" Value="5 0 0 0"/>
+                                </Style>
+                            </Grid.Resources>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0">
+                                <Border Margin="2" BorderThickness="2" BorderBrush="LightSlateGray">
+                                    <ScrollViewer x:Name="scvMatrixMGZ" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                                        <ScrollViewer.Resources>
+                                            <Style TargetType="ScrollBar">
+                                                <Setter Property="Width" Value="20"/>
+                                                <Setter Property="Height" Value="auto"/>
+                                            </Style>
+                                        </ScrollViewer.Resources>
+                                        <Grid x:Name="grMatrixMGZ" Margin="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <!-- Các nút sẽ được thêm vào đây -->
+                                            <Grid.Resources>
+                                                <Style TargetType="Button">
+                                                    <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                                                    <Setter Property="Background" Value="White" />
+                                                    <Setter Property="Margin" Value="0.5"/>
+                                                    <Setter Property="BorderThickness" Value="1"/>
+                                                    <Setter Property="BorderBrush" Value="#6787c0"/>
+                                                    <Setter Property="FontSize" Value="20" />
+                                                </Style>
+                                            </Grid.Resources>
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <GroupBox Foreground="Black" BorderBrush="LightSlateGray" Header="POINT MATRIX" FontSize="20" BorderThickness="2">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="0.5*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label
+                                            Grid.Column="0" Grid.Row="0"
+                                            Content="INDEX"
+                                            FontSize="16"
+                                            Background="Transparent" Foreground="Black"
+                                            BorderThickness="0"
+                                            HorizontalAlignment="Left"
+                                            Padding="5 0 0 0"
+>
+                                        </Label>
+                                        <Label
+                                            Grid.Column="0" Grid.Row="1"
+                                            Content="DATA POS"
+                                            FontSize="16"
+                                            Background="Transparent" Foreground="Black"
+                                            BorderThickness="0"
+                                            HorizontalAlignment="Left"
+                                            Padding="5 0 0 0"
+>
+                                        </Label>
+                                        <Label
+                                            Grid.Column="1" Grid.Row="0"
+                                            x:Name="lbPoint"
+                                            Style="{StaticResource LabelDark}"
+                                            FontSize="18"
+                                            Margin="5"
+                                            Content="00"
+>
+                                        </Label>
+                                        <local:DataDWord_D
+                                            Grid.Column="1" Grid.Row="1"
+                                            Margin="2"
+                                            IsTabItem="False" 
+                                            FontFamily="Arial" 
+                                            FontSize="20"
+                                            NoOfDisplay="4"
+                                            NoOfDecimalDigits="3" 
+                                            CodeDevice="R" Device="3010" 
+                                            IsReadOnly="True" 
+                                            Background="Black" 
+                                            Foreground="Gray"
+>
+                                        </local:DataDWord_D>
+                                        <Label
+                                            Grid.Column="2" Grid.Row="0"
+                                            Content="Point"
+                                            FontSize="16"
+                                            Background="Transparent" Foreground="Black"
+                                            BorderThickness="0"
+                                            HorizontalAlignment="Left"
+                                            Padding="0 0 0 0"
+>
+                                        </Label>
+                                        <Label
+                                            Grid.Column="2" Grid.Row="1"
+                                            Content="mm"
+                                            FontSize="16"
+                                            Background="Transparent" Foreground="Black"
+                                            BorderThickness="0"
+                                            HorizontalAlignment="Left"
+                                            Padding="0 0 0 0"
+>
+                                        </Label>
+
+                                        <local:PLCButton
+                                            Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
+                                            x:Name="btRunPoint"
+                                            Action="Momentary"
+                                            DeviceLamp="L" AddressLamp="12605"
+                                            BackgroundLampOFF="Transparent"
+                                            BackgroundLampON="GreenYellow"
+                                            HorizontalContentAlignment="Center"
+                                            Content="UNLOADER MATRIX POS5"
+                                            IsComfrim="True"
+                                            IsMesComfrim="Confrim Go To POS"
+>
+                                        </local:PLCButton>
+                                        <!--<Button 
+                                            Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
+                                            x:Name="btRunPoint"
+                                            Content="RUN POINT MATRIX"
+                                            FontSize="18"
+                                            ContentTemplate="{x:Null}"
+>
+                                        </Button>-->
+                                    </Grid>
+                                </GroupBox>
+                            </Grid>
+
+                        </Grid>
                     </TabItem>
                     <TabItem FontSize="16" Header="U2#5 - UNLOADDER ULY"  Height="30">
 

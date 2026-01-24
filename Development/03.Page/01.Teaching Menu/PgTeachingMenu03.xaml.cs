@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KeyPad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace Development
 {
@@ -21,9 +23,23 @@ namespace Development
     /// </summary>
     public partial class PgTeachingMenu03 : Page
     {
+
+        private MyLogger logger = new MyLogger("PgTeachingMenu");
+        private volatile bool isUpdate = false;
+
+        int pointSelectButton;
+
+        Button _previousButton;
+
+        private List<bool> L_ListUpdateDevicePLC_12600 = new List<bool>();
+        private List<short> D_ListUpdateDevicePLC_500 = new List<short>();
+
         public PgTeachingMenu03()
         {
             InitializeComponent();
+
+            this.Loaded += PgTeachingMenu03_Loaded;
+            this.Unloaded += PgTeachingMenu03_Unloaded;
 
             this.btTeaching00.Click += BtTeaching00_Click;
             this.btTeaching01.Click += BtTeaching01_Click;
@@ -64,8 +80,23 @@ namespace Development
             //this.btLoadTab3Pos8.Click += btLoadTab3Pos8_Click;
             //this.btLoadTab3Pos9.Click += btLoadTab3Pos9_Click;
 
+            this.btRunPoint.Clicked += BtRunPoint_Clicked;
+
         }
 
+
+        private void BtRunPoint_Clicked(object sender, RoutedEventArgs e)
+        {
+            WndComfirm comfirmYesNo = new WndComfirm();
+            if (!comfirmYesNo.DoComfirmYesNo($"Confrim go to POS")) return;
+            UiManager.Instance.PLC.device.WriteWord(DeviceCode.D, 511, Convert.ToInt32(lbPoint.Content));
+            Thread.Sleep(10);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2605, true);
+            Thread.Sleep(10);
+            UiManager.Instance.PLC.device.WriteBit(DeviceCode.L, 2605, false);
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void btLoadTab3Pos9_Click(object sender, RoutedEventArgs e)
         {
@@ -457,5 +488,223 @@ namespace Development
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_01);
         }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void PgTeachingMenu03_Unloaded(object sender, RoutedEventArgs e)
+        {
+            this.isUpdate = false;
+        }
+
+        private void PgTeachingMenu03_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.isUpdate = true;
+            new Thread(new ThreadStart(this.ReadPLC))
+            {
+                IsBackground = true
+            }.Start();
+
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void GridMatrixCreat()
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                int point = D_ListUpdateDevicePLC_500[12]; // Tổng số nút bạn muốn tạo
+                int columns = 1; // Số cột cố định
+                int rows = (int)Math.Ceiling((double)point / columns); // Tính số hàng
+
+                //Xoá
+                grMatrixMGZ.Children.Clear();
+                grMatrixMGZ.ColumnDefinitions.Clear();
+                grMatrixMGZ.RowDefinitions.Clear();
+                #region
+                //// Đặt số cột và hàng cho Grid
+                //for (int i = 0; i < columns; i++)
+                //{
+                //    grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
+                //}
+
+                //for (int i = 0; i < rows; i++)
+                //{
+                //    grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
+                //}
+
+                //// Tạo các nút và thêm vào Grid
+
+                //for (int i = 0; i < point; i++)
+                //{
+                //    Button btMatrix = new Button
+                //    {
+                //        Content = $"{i + 1}",
+                //        Tag = i + 1 // Lưu số tương ứng vào Tag
+                //    };
+
+                //    // Đăng ký sự kiện Click cho nút
+                //    btMatrix.Click += BtMatrix_Click;
+
+                //    // Tính toán vị trí cột và hàng cho từng nút
+                //    int row = rows - 1 - (i / columns); //từ dưới lên
+                //    if (D_ListUpdateDevicePLC_500[4] < 0)
+                //    {
+                //        row = i / columns; //từ trên xuống
+                //    }
+                //    int column = i % columns;
+
+                //    Grid.SetRow(btMatrix, row);
+                //    Grid.SetColumn(btMatrix, column);
+
+                //    grMatrixMGZ.Children.Add(btMatrix);
+
+                //}
+                #endregion
+
+                int max = Math.Max(Math.Max(columns, rows), point);
+                for (int i = 0; i < max; i++)
+                {
+                    // Tạo Column
+                    if (i < columns)
+                    {
+                        grMatrixMGZ.ColumnDefinitions.Add(new ColumnDefinition());
+                    }
+
+                    // Tạo Row
+                    if (i < rows)
+                    {
+                        grMatrixMGZ.RowDefinitions.Add(new RowDefinition());
+                    }
+
+                    // Tạo Button
+                    if (i < point)
+                    {
+                        Button btMatrix = new Button
+                        {
+                            Content = (i + 1).ToString(),
+                            Tag = i + 1
+                        };
+
+                        btMatrix.Click += BtMatrix_Click;
+
+                        int row = rows - 1 - (i / columns); // từ dưới lên
+                        if (D_ListUpdateDevicePLC_500[14] < 0)
+                        {
+                            row = i / columns; // từ trên xuống
+                        }
+
+                        int column = i % columns;
+
+                        Grid.SetRow(btMatrix, row);
+                        Grid.SetColumn(btMatrix, column);
+
+                        grMatrixMGZ.Children.Add(btMatrix);
+                    }
+                }
+
+                this.lbPoint.MouseDown -= LbPoint_MouseDown;
+                this.lbPoint.MouseDown += LbPoint_MouseDown;
+            }));
+
+
+        }
+        private void BtMatrix_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                // Đổi màu nền cho nút hiện tại
+                clickedButton.Background = Brushes.LightGreen;
+
+                // Đặt lại màu nền của nút trước đó về màu mặc định
+                if (_previousButton != null && _previousButton != clickedButton)
+                {
+                    _previousButton.Background = Brushes.White; // Màu nền mặc định
+                }
+
+                // Lưu nút hiện tại làm nút đã được nhấn trước đó
+                _previousButton = clickedButton;
+
+                // Lấy số tương ứng từ Tag và in ra
+                pointSelectButton = (int)clickedButton.Tag;
+
+                lbPoint.Content = pointSelectButton.ToString();
+
+
+            }
+        }
+        private void LbPoint_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Keypad kp = new Keypad(false);
+            if (kp.ShowDialog() == true)
+            {
+                int value = Convert.ToInt32(kp.Result);
+                int min = 0;
+                int max = D_ListUpdateDevicePLC_500[12];
+                value = value < min ? min : (value > max ? max : value);
+
+                lbPoint.Content = value.ToString();
+            }
+        }
+        private void ReadPLC()
+        {
+            try
+            {
+                while (this.isUpdate)
+                {
+                    if (UiManager.Instance.PLC.device.isOpen())
+                    {
+
+                        UiManager.Instance.PLC.device.ReadMultiWord(DeviceCode.D, 500, 20, out D_ListUpdateDevicePLC_500);
+
+                        if (D_ListUpdateDevicePLC_500.Count > 0)
+                        {
+                            this.isUpdate = false;
+                        }
+                        //this.UpdateUI();
+                    }
+
+                    Thread.Sleep(20);
+                }
+                if (UiManager.Instance.PLC.device.isOpen())
+                {
+                    GridMatrixCreat();
+                }
+            }
+            catch (Exception ex)
+            {
+                this.logger.Create("ReadPLC Error: " + ex.Message, LogLevel.Error);
+            }
+
+        }
+        private void UpdateUI()
+        {
+            if (!UiManager.Instance.PLC.device.isOpen() || !isUpdate) return;
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                try
+                {
+                    if (!isUpdate) return;
+
+                    if (L_ListUpdateDevicePLC_12600.Count > 0)
+                    {
+
+                    }
+                    if (D_ListUpdateDevicePLC_500.Count > 0)
+                    {
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    this.logger.Create("Update UI Error: " + ex.Message, LogLevel.Error);
+                }
+            }));
+        }
+
+
     }
 }

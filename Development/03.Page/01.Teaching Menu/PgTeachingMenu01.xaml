@@ -1200,13 +1200,13 @@
 
                                         <local:PLCButton
                                             Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
-                                            Action="Momentary"
                                             x:Name="btRunPoint"
+                                            Action="Momentary"
                                             DeviceLamp="L" AddressLamp="12205"
                                             BackgroundLampOFF="Transparent"
                                             BackgroundLampON="GreenYellow"
                                             HorizontalContentAlignment="Center"
-                                            Content="LOADER MATRIX POS1"
+                                            Content="LOADER MATRIX POS5"
                                             IsComfrim="True"
                                             IsMesComfrim="Confrim Go To POS"
 >
