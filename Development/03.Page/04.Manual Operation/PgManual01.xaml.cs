@@ -24,19 +24,19 @@ namespace Development
         {
             InitializeComponent();
 
-            this.btManual00.Click += BtManual00_Click;
-            this.btManual01.Click += BtManual01_Click;
+            this.btMenuTab00.Click += BtMenuTab00_Click;
+            this.btMenuTab01.Click += BtMenuTab01_Click;
             
 
         }
 
 
 
-        private void BtManual01_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab01_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MANUAL_OPERATION_01);
         }
-        private void BtManual00_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab00_Click(object sender, RoutedEventArgs e)
         {
             if (UserManager.IsLogOn() == 3)
             {

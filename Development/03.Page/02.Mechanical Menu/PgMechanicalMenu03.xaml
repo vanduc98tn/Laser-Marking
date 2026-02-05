@@ -1,4 +1,4 @@
-﻿<Page x:Class="Development.PgMechanicalMenu00"
+﻿<Page x:Class="Development.PgMechanicalMenu03"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Development"
       mc:Ignorable="d" 
        d:DesignHeight="790" d:DesignWidth="1300"
-      Title="PgMechanicalMenu00">
+      Title="PgMechanicalMenu03">
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
@@ -37,7 +37,6 @@
                     <Setter Property="FontSize" Value="22" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="Foreground" Value="Black"/>
-
 
                 </Style>
 
@@ -70,46 +69,18 @@
                             </Label.Effect> System Menu
                         </Label>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 100 0 0" >
-
-                        <Button x:Name="btSetting1"  Height="60" Width="215" >
-                            <StackPanel Orientation="Horizontal">
-                                <!-- Add an Image control here with the source attribute pointing to your image file -->
-
-                                <TextBlock Padding="10" Text="Device PLC" Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0 80 0 0" >
+                        <Button x:Name="btMenuTab01"  Height="60">
+                            <TextBlock Text="Device PLC"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-
-
-                        <Button x:Name="btSetting2" Background="#333333"  Height="60" Width="215" >
-                            <StackPanel Orientation="Horizontal">
-                                <!-- Add an Image control here with the source attribute pointing to your image file -->
-
-                                <TextBlock Padding="10" Text="MES" Foreground="White"  Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                        <Button x:Name="btMenuTab02"  Height="60">
+                            <TextBlock Text="MES"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-
-                        <Button x:Name="btSetting3" Height="60" Width="215" Margin="0 5 5 5" BorderThickness="0" >
-                            <StackPanel Orientation="Horizontal">
-
-
-
-                                <TextBlock Padding="10" Text="TCP Vision" Foreground="Black" Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                        <Button x:Name="btMenuTab03" Background="#333333" Height="60">
+                            <TextBlock Text="Scanner" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-
-                        <Button x:Name="btSetting4"  Height="60" Width="215" >
-                            <StackPanel Orientation="Horizontal">
-                                <!-- Add an Image control here with the source attribute pointing to your image file -->
-
-                                <TextBlock Padding="10" Text="Tester"  Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                        <Button x:Name="btMenuTab04"  Height="60">
+                            <TextBlock Text="Laser"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 
                     </StackPanel>
@@ -133,7 +104,7 @@
                 <Label  FontWeight="Bold" Foreground="White" FontSize="30"  Margin="0,0,10,0" >
                     <Label.Effect>
                         <DropShadowEffect Color="Black" Direction="320" ShadowDepth="5" Opacity="0.3"/>
-                    </Label.Effect> SETTING MES
+                    </Label.Effect> SETTING TCP TRANFER VISION
                 </Label>
             </Grid>
             <Grid Grid.Row="1" Background="#DDDDDD">
@@ -175,8 +146,8 @@
                     <Grid Grid.Column="0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="40"></RowDefinition>
-                            <RowDefinition Height="180*"></RowDefinition>
-                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="180"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Label FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Foreground="Black" Content="Logs" Background="White">
                         </Label>
@@ -186,7 +157,7 @@
                                 <RowDefinition Height="40" />
                             </Grid.RowDefinitions>
                             <TextBox Grid.Row="0" x:Name="txtLogs" Text="{Binding rxLog}" Background="Black" Foreground="White"
-           VerticalScrollBarVisibility="Visible"></TextBox>
+       VerticalScrollBarVisibility="Visible"></TextBox>
                             <Button Grid.Row="1" Name="btLogClear" Margin="2,2,10,2" Foreground="Black" FontFamily="Arial" FontWeight="Light"  Content="Clear">
                             </Button>
                         </Grid>
@@ -237,41 +208,29 @@
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="300"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition Width="1.5*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Margin="2" FontWeight="Bold" Padding="30 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="#333333" FontSize="20" Foreground="White">IP MES</Label>
-                            <TextBox x:Name="tbIPMES" Grid.Column="1">127.0.0.1</TextBox>
+                            <Label Grid.Column="0" Margin="2" FontWeight="Bold" Padding="30 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="#333333" FontSize="20" Foreground="White">IP TCP VISION</Label>
+                            <TextBox x:Name="tbIpTCPVision" Grid.Column="1">000.0.0.0</TextBox>
                         </Grid>
 
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="300"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition Width="1.5*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Margin="2" FontWeight="Bold" Padding="30 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="#333333" FontSize="20" Foreground="White">PORT MES</Label>
-                            <TextBox x:Name="tbPortMES" Grid.Column="1">5010</TextBox>
+                            <Label Grid.Column="0" Margin="2" FontWeight="Bold" Padding="30 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="#333333" FontSize="20" Foreground="White">PORT TCP VISION</Label>
+                            <TextBox x:Name="tbPortTCPVision" Grid.Column="1">5000</TextBox>
                         </Grid>
-
-                        <Grid Grid.Row="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="300"></ColumnDefinition>
-                                <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Margin="2" FontWeight="Bold" Padding="30 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="#333333" FontSize="20" Foreground="White">EQUIPMENT MES</Label>
-                            <TextBox x:Name="tbEquipment" Grid.Column="1">Equipment</TextBox>
-                        </Grid>
-
                         <Grid Grid.Row="3">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Button x:Name="btSave">Save</Button>
+                            <Button Grid.Column="0" x:Name="btSave">Save</Button>
+                            <Button Grid.Column="1" x:Name="btTest">Send Ready</Button>
                         </Grid>
 
                     </Grid>

@@ -33,11 +33,10 @@ namespace Development
         PAGE_TEACHING_MENU_07,
 
 
-        PAGE_MECHANICAL_MENU_PLC,
-        PAGE_MECHANICAL_MENU_00,
         PAGE_MECHANICAL_MENU_01,
         PAGE_MECHANICAL_MENU_02,
         PAGE_MECHANICAL_MENU_03,
+        PAGE_MECHANICAL_MENU_04,
 
         PAGE_SYSTEM_MENU_01,
         PAGE_SYSTEM_MENU_02,
@@ -179,10 +178,10 @@ namespace Development
             pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_03, new PgTeachingMenu03());
             pageTable.Add(PAGE_ID.PAGE_TEACHING_MENU_04, new PgTeachingMenu04());
 
-            pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_PLC, new PgMechanicalMenuPLC());
-            pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_00, new PgMechanicalMenu00());
             pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_01, new PgMechanicalMenu01());
             pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_02, new PgMechanicalMenu02());
+            pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_03, new PgMechanicalMenu03());
+            pageTable.Add(PAGE_ID.PAGE_MECHANICAL_MENU_04, new PgMechanicalMenu04());
 
             pageTable.Add(PAGE_ID.PAGE_SYSTEM_MENU_01, new PgSystemMenu01());
             pageTable.Add(PAGE_ID.PAGE_SYSTEM_MENU_02, new PgSystemMenu02());

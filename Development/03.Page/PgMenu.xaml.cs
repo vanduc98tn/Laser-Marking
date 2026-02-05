@@ -73,7 +73,7 @@ namespace Development
 
         private void BtMechanical_Click(object sender, RoutedEventArgs e)
         {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_PLC);
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_01);
         }
 
         private void BtLogout_Click(object sender, RoutedEventArgs e)

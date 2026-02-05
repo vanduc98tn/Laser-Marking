@@ -1,4 +1,4 @@
-﻿<Page x:Class="Development.PgMechanicalMenuPLC"
+﻿<Page x:Class="Development.PgMechanicalMenu01"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Development"
       mc:Ignorable="d" 
       d:DesignHeight="790" d:DesignWidth="1300"
-      Title="PgMechanicalMenuPLC">
+      Title="PgMechanicalMenu01">
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
@@ -69,46 +69,18 @@
                             </Label.Effect> System Menu
                         </Label>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 100 0 0" >
-
-                        <Button x:Name="btSetting1" Background="#333333"  Height="60" Width="215" >
-                            <StackPanel Orientation="Horizontal">
-                                <!-- Add an Image control here with the source attribute pointing to your image file -->
-
-                                <TextBlock Padding="10" Foreground="White" Text="Device PLC"  Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0 80 0 0" >
+                        <Button x:Name="btMenuTab01" Background="#333333" Height="60">
+                            <TextBlock Text="Device PLC" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-
-
-                        <Button x:Name="btSetting2"  Height="60" Width="215" >
-                            <StackPanel Orientation="Horizontal">
-                                <!-- Add an Image control here with the source attribute pointing to your image file -->
-
-                                <TextBlock Padding="10" Text="MES"  Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                        <Button x:Name="btMenuTab02"  Height="60">
+                            <TextBlock Text="MES"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-
-                        <Button x:Name="btSetting3" Height="60" Width="215"  Margin="0 5 5 5" BorderThickness="0" >
-                            <StackPanel Orientation="Horizontal">
-
-
-
-                                <TextBlock Padding="10" Text="TCP Vision"  Margin="10" VerticalAlignment="Center"/>
-                            </StackPanel>
+                        <Button x:Name="btMenuTab03"  Height="60">
+                            <TextBlock Text="Scanner"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-
-
-
-                        <Button x:Name="btSetting4"  Height="60" Width="215" >
-                            <StackPanel Orientation="Horizontal">
-                                <!-- Add an Image control here with the source attribute pointing to your image file -->
-
-                                <TextBlock Padding="10" Text="Tester"  Margin="10"  VerticalAlignment="Center"/>
-                            </StackPanel>
+                        <Button x:Name="btMenuTab04"  Height="60">
+                            <TextBlock Text="Laser"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 
                     </StackPanel>

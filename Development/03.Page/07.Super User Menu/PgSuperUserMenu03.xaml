@@ -74,16 +74,16 @@
                             <TextBlock Text="Manual Tab" Margin="10" HorizontalAlignment="Left"/>
                         </Button>-->
 
-                        <Button x:Name="btSetting01"  Height="60">
+                        <Button x:Name="btMenuTab01"  Height="60">
                             <TextBlock Text="Delay Cylinder "  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btSetting02"  Height="60">
+                        <Button x:Name="btMenuTab02"  Height="60">
                             <TextBlock Text="Delay Work"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btSetting03" Background="#333333" Height="60">
+                        <Button x:Name="btMenuTab03" Background="#333333" Height="60">
                             <TextBlock Text="Servo Setting 1" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btSetting04"  Height="60">
+                        <Button x:Name="btMenuTab04"  Height="60">
                             <TextBlock Text="Servo Setting 2"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 

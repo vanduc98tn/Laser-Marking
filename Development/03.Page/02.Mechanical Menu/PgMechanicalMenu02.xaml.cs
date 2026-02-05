@@ -16,19 +16,19 @@ using System.Windows.Shapes;
 namespace Development
 {
     /// <summary>
-    /// Interaction logic for PgMechanicalMenu00.xaml
+    /// Interaction logic for PgMechanicalMenu02.xaml
     /// </summary>
-    public partial class PgMechanicalMenu00 : Page
+    public partial class PgMechanicalMenu02 : Page
     {
-        public PgMechanicalMenu00()
+        public PgMechanicalMenu02()
         {
             InitializeComponent();
-            this.Loaded += PgMechanicalMenu00_Loaded;
+            this.Loaded += PgMechanicalMenu02_Loaded;
 
-            this.btSetting1.Click += BtSetting1_Click;
-            this.btSetting2.Click += BtSetting2_Click;
-            this.btSetting3.Click += BtSetting3_Click;
-            this.btSetting4.Click += BtSetting4_Click;
+            this.btMenuTab01.Click += BtMenuTab01_Click;
+            this.btMenuTab02.Click += BtMenuTab02_Click;
+            this.btMenuTab03.Click += BtMenuTab03_Click;
+            this.btMenuTab04.Click += BtMenuTab04_Click;
 
             this.btSave.Click += BtSave_Click;
             this.btLogClear.Click += BtLogClear_Click;
@@ -44,31 +44,28 @@ namespace Development
             SaveSetting();
         }
 
-        private void PgMechanicalMenu00_Loaded(object sender, RoutedEventArgs e)
+        private void PgMechanicalMenu02_Loaded(object sender, RoutedEventArgs e)
         {
             this.UpdateUI();
         }
 
-        private void BtSetting4_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab04_Click(object sender, RoutedEventArgs e)
+        {
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_04);
+        }
+        private void BtMenuTab03_Click(object sender, RoutedEventArgs e)
+        {
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_03);
+
+        }
+        private void BtMenuTab02_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_02);
-        }
 
-        private void BtSetting3_Click(object sender, RoutedEventArgs e)
+        }
+        private void BtMenuTab01_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_01);
-
-        }
-
-        private void BtSetting2_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_00);
-
-        }
-
-        private void BtSetting1_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_PLC);
 
         }
 

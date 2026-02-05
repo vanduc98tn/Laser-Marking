@@ -70,20 +70,20 @@
                         </Label>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0 80 0 0" >
-                        <Button x:Name="btTeaching00"  Height="60">
+                        <Button x:Name="btMenuTab00"  Height="60">
                             <TextBlock Text="Manual Tab" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 
-                        <Button x:Name="btTeaching01"  Height="60">
+                        <Button x:Name="btMenuTab01"  Height="60">
                             <TextBlock Text="Loader MGZ"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btTeaching02"  Height="60">
+                        <Button x:Name="btMenuTab02"  Height="60">
                             <TextBlock Text="Transfer"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btTeaching03"  Height="60">
+                        <Button x:Name="btMenuTab03"  Height="60">
                             <TextBlock Text="Unloader MGZ"  Margin="10" HorizontalAlignment="Left"/>
                         </Button>
-                        <Button x:Name="btTeaching04" Background="#333333" Height="60">
+                        <Button x:Name="btMenuTab04" Background="#333333" Height="60">
                             <TextBlock Text="Matrix Settings" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 

@@ -182,8 +182,8 @@
     <Compile Include="05.Wnd\02.WndAlarm\WndAlarm.xaml.cs">
       <DependentUpon>WndAlarm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenuPLC.xaml.cs">
-      <DependentUpon>PgMechanicalMenuPLC.xaml</DependentUpon>
+    <Compile Include="03.Page\02.Mechanical Menu\PgMechanicalMenu01.xaml.cs">
+      <DependentUpon>PgMechanicalMenu01.xaml</DependentUpon>
     </Compile>
     <Compile Include="02.Library\07.PLC\01.Mitsubishi\TCP MC Protocol\ServiceTCPMCProtocolBinary.cs" />
     <Compile Include="02.Library\02.Library AppSetting\SettingDevice.cs" />
@@ -245,14 +245,14 @@
     <Compile Include="02.Library\04.LogFile\LogLevel.cs" />
     <Compile Include="300.Library Tester\TesterCOM.cs" />
     <Compile Include="200.Server TCP Vision\TcpImageServer.cs" />
-    <Compile Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenu00.xaml.cs">
-      <DependentUpon>PgMechanicalMenu00.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenu01.xaml.cs">
-      <DependentUpon>PgMechanicalMenu01.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenu02.xaml.cs">
+    <Compile Include="03.Page\02.Mechanical Menu\PgMechanicalMenu02.xaml.cs">
       <DependentUpon>PgMechanicalMenu02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="03.Page\02.Mechanical Menu\PgMechanicalMenu03.xaml.cs">
+      <DependentUpon>PgMechanicalMenu03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="03.Page\02.Mechanical Menu\PgMechanicalMenu04.xaml.cs">
+      <DependentUpon>PgMechanicalMenu04.xaml</DependentUpon>
     </Compile>
     <Compile Include="200.Vision ZoomBorder\ZoomBorder.cs" />
     <Compile Include="400.ECIGA WEIGHT\Scale.cs" />
@@ -402,7 +402,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenuPLC.xaml">
+    <Page Include="03.Page\02.Mechanical Menu\PgMechanicalMenu01.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -474,15 +474,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenu00.xaml">
+    <Page Include="03.Page\02.Mechanical Menu\PgMechanicalMenu02.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenu01.xaml">
+    <Page Include="03.Page\02.Mechanical Menu\PgMechanicalMenu03.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="03.Page\02.Pg Mechanical Menu\PgMechanicalMenu02.xaml">
+    <Page Include="03.Page\02.Mechanical Menu\PgMechanicalMenu04.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

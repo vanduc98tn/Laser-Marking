@@ -18,19 +18,19 @@ using Mitsubishi;
 namespace Development
 {
     /// <summary>
-    /// Interaction logic for PgMechanicalMenuPLC.xaml
+    /// Interaction logic for PgMechanicalMenu01.xaml
     /// </summary>
-    public partial class PgMechanicalMenuPLC : Page
+    public partial class PgMechanicalMenu01 : Page
     {
 
         private SettingDevice settingDevice;
-        private MyLogger logger = new MyLogger("PgMechanicalPLCMenu");
+        private MyLogger logger = new MyLogger("PgMechanical01Menu");
 
         private DispatcherTimer timer;
-        public PgMechanicalMenuPLC()
+        public PgMechanicalMenu01()
         {
             InitializeComponent();
-            this.Loaded += PgMechanicalMenuPLC_Loaded;
+            this.Loaded += PgMechanicalMenu01_Loaded;
             this.btnOpen.Click += BtnOpen_Click;
             this.btnClose.Click += BtnClose_Click;
 
@@ -51,32 +51,29 @@ namespace Development
             this.btWriteString.Click += BtWriteString_Click;
 
 
-            this.btSetting1.Click += BtSetting1_Click;
-            this.btSetting2.Click += BtSetting2_Click;
-            this.btSetting3.Click += BtSetting3_Click;
-            this.btSetting4.Click += BtSetting4_Click;
+            this.btMenuTab01.Click += BtMenuTab01_Click;
+            this.btMenuTab02.Click += BtMenuTab02_Click;
+            this.btMenuTab03.Click += BtMenuTab03_Click;
+            this.btMenuTab04.Click += BtMenuTab04_Click;
         }
 
-        private void BtSetting4_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab04_Click(object sender, RoutedEventArgs e)
+        {
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_04);
+        }
+        private void BtMenuTab03_Click(object sender, RoutedEventArgs e)
+        {
+            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_03);
+
+        }
+        private void BtMenuTab02_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_02);
-        }
 
-        private void BtSetting3_Click(object sender, RoutedEventArgs e)
+        }
+        private void BtMenuTab01_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_01);
-
-        }
-
-        private void BtSetting2_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_00);
-
-        }
-
-        private void BtSetting1_Click(object sender, RoutedEventArgs e)
-        {
-            UiManager.Instance.SwitchPage(PAGE_ID.PAGE_MECHANICAL_MENU_PLC);
 
         }
         #region Button Action 
@@ -562,7 +559,7 @@ namespace Development
         {
             this.txtLogs.Text = "";
         }
-        private void PgMechanicalMenuPLC_Loaded(object sender, RoutedEventArgs e)
+        private void PgMechanicalMenu01_Loaded(object sender, RoutedEventArgs e)
         {
             Time_Ticke();
             settingDevice = UiManager.appSetting.settingDevice;

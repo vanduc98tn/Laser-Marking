@@ -24,27 +24,27 @@ namespace Development
         {
             InitializeComponent();
 
-            this.btSetting01.Click += BtSetting01_Click;
-            this.btSetting02.Click += BtSetting02_Click;
-            this.btSetting03.Click += BtSetting03_Click;
-            this.btSetting04.Click += BtSetting04_Click;
+            this.btMenuTab01.Click += BtMenuTab01_Click;
+            this.btMenuTab02.Click += BtMenuTab02_Click;
+            this.btMenuTab03.Click += BtMenuTab03_Click;
+            this.btMenuTab04.Click += BtMenuTab04_Click;
 
         }
 
 
-        private void BtSetting04_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab04_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_04);
         }
-        private void BtSetting03_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab03_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_03);
         }
-        private void BtSetting02_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab02_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_02);
         }
-        private void BtSetting01_Click(object sender, RoutedEventArgs e)
+        private void BtMenuTab01_Click(object sender, RoutedEventArgs e)
         {
             UiManager.Instance.SwitchPage(PAGE_ID.PAGE_SUPER_USER_MENU_01);
         }

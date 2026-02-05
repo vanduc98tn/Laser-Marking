@@ -70,11 +70,11 @@
                         </Label>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0 80 0 0" >
-                        <Button x:Name="btManual00"  Height="60">
+                        <Button x:Name="btMenuTab00"  Height="60">
                             <TextBlock Text="Teaching Tab" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 
-                        <Button x:Name="btManual01" Background="#333333" Height="60">
+                        <Button x:Name="btMenuTab01" Background="#333333" Height="60">
                             <TextBlock Text="Manual" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                         </Button>
 
