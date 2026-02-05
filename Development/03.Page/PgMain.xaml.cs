@@ -21,6 +21,7 @@ namespace Development
 {
     public partial class PgMain : Page, IObserverChangeBits
     {
+        //Nguyễn Việt Hùng đã ở đây
         private MyLogger logger = new MyLogger("PgMain");
         private DispatcherTimer timer;
         private LotInData lotInData;
@@ -34,6 +35,7 @@ namespace Development
         private MediaPlayer mediaPlayer = new MediaPlayer();
         private bool isLooping = false;
 
+        private bool isPlaying = false;
         public PgMain()
         {
             // ON Binding addlog
