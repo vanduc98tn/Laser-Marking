@@ -31,7 +31,6 @@ namespace Development
         private List<bool> M_ListBitPLC0_500 = new List<bool>();
         private bool hasClearedError = false;
 
-
         private MediaPlayer mediaPlayer = new MediaPlayer();
         private bool isLooping = false;
 
