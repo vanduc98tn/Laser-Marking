@@ -33,8 +33,8 @@ namespace Development
         private bool hasClearedError = false;
 
         private MediaPlayer mediaPlayer = new MediaPlayer();
+        private bool isLooping = false;
 
-        private bool isPlaying = false;
         public PgMain()
         {
             // ON Binding addlog

@@ -73,53 +73,13 @@
                                 </Label.Effect> System Menu
                             </Label>
                         </StackPanel>
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 100 0 0" >
-                            <Button x:Name="btSetting1"  Height="60" Width="215" >
-                                <StackPanel Orientation="Horizontal">
-                                    <!-- Add an Image control here with the source attribute pointing to your image file -->
-                                   
-                                    <TextBlock Padding="10" Text="InPut"  Margin="10" VerticalAlignment="Center"/>
-                                </StackPanel>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0 80 0 0" >
+                            <Button x:Name="btMenuTab01"  Height="60">
+                                <TextBlock Text="Input I/O"  Margin="10" HorizontalAlignment="Left"/>
                             </Button>
-
-                            <Button x:Name="btSetting2" Background="#333333" Height="60" Width="215"  BorderThickness="0" Margin="0 5 5 5" >
-                                <StackPanel Orientation="Horizontal">
-
-                                    
-
-                                    <TextBlock Padding="10" Text="OutPut" Foreground="White" Margin="10" VerticalAlignment="Center"/>
-                                </StackPanel>
+                            <Button x:Name="btMenuTab02" Background="#333333" Height="60">
+                                <TextBlock Text="Output I/O" Foreground="White" Margin="10" HorizontalAlignment="Left"/>
                             </Button>
-
-
-
-
-
-
-
-
-
-                            <!--<Button x:Name="btSetting3"  Height="60" Width="215" >
-                         <StackPanel Orientation="Horizontal">
-                             -->
-                            <!-- Add an Image control here with the source attribute pointing to your image file -->
-                            <!--
-                             <Image Source="/Folder/PageUI/Icon/button off.png" VerticalAlignment="Center"  Margin="0 5 0 0" ></Image>
-                             <TextBlock Padding="10" Text="Setting 3"  Margin="10" VerticalAlignment="Center"/>
-                         </StackPanel>
-                     </Button>-->
-
-
-
-                            <!--<Button x:Name="btSetting4"  Height="60" Width="215" >
-                         <StackPanel Orientation="Horizontal">
-                             -->
-                            <!-- Add an Image control here with the source attribute pointing to your image file -->
-                            <!--
-                             <Image Source="/Folder/PageUI/Icon/button off.png" VerticalAlignment="Center"  Margin="0 5 0 0" ></Image>
-                             <TextBlock Padding="10" Text="Setting 4"  Margin="10" VerticalAlignment="Center"/>
-                         </StackPanel>
-                     </Button>-->
 
                         </StackPanel>
                     </Grid>
